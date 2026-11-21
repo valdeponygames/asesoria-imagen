@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Asesoría de Imagen Personal y Corporativa</title>
+<link rel="stylesheet" href="estilos.css">
+<script>
+  // Aplica el color y el modo guardados antes de pintar (evita parpadeo).
+  try { var p = JSON.parse(localStorage.getItem("prefs") || "{}"), h = document.documentElement;
+    h.setAttribute("data-color", p.color || "lila"); h.setAttribute("data-letra", p.letra || "normal");
+    if (p.modo && p.modo !== "auto") h.setAttribute("data-theme", p.modo); } catch (e) {}
+</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-in">
+    <button class="logo" id="logo"><span class="logo-i">✎</span><span class="logo-t">Asesoría de Imagen <span class="logo-sub">Personal y Corporativa</span></span></button>
+    <div class="top-r">
+      <span class="muted small hide-m" id="totalBanco"></span>
+      <button class="icon-btn" id="btnAjustes" aria-label="Personalizar" title="Personalizar">⚙</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <!-- ================= SELECCIÓN ================= -->
+  <section id="vSeleccion">
+    <div class="hero">
+      <h1>¿Qué quieres repasar hoy?</h1>
+      <p class="muted">Toca los temas para añadirlos al examen. Puedes mezclar asignaturas.</p>
+    </div>
+
+    <div class="sel-layout">
+      <div class="sel-main">
+        <div class="toolbar">
+          <label class="search"><span>⌕</span><input id="buscar" type="search" placeholder="Buscar tema o asignatura…" autocomplete="off"></label>
+          <div class="toolbar-btns">
+            <button class="chip-btn" id="btnTodo">Todo</button>
+            <button class="chip-btn" id="btnAzar" title="Elige 3 temas al azar">🎲 Al azar</button>
+            <button class="chip-btn" id="btnLimpiar">Limpiar</button>
+          </div>
+        </div>
+        <div id="asignaturas" class="asigs"></div>
+        <p class="muted small vacio" id="sinResultados" hidden>No hay temas que coincidan con la búsqueda.</p>
+      </div>
+
+      <aside class="panel" id="panel">
+        <div class="panel-in">
+          <div class="panel-h">
+            <h2>Tu examen</h2>
+            <span class="pill" id="selCount">0 temas</span>
+          </div>
+          <div class="panel-body">
+            <div class="field">
+              <span class="field-l">Preguntas</span>
+              <div class="seg" id="segN">
+                <button data-v="10">10</button><button data-v="20">20</button><button data-v="30">30</button><button data-v="40">40</button>
+              </div>
+            </div>
+            <label class="switch">
+              <input type="checkbox" id="swPractica">
+              <span class="sw-track"><span class="sw-thumb"></span></span>
+              <span><strong>Modo práctica</strong><br><span class="muted small">Ver la solución al responder</span></span>
+            </label>
+            <div class="sel-list" id="selList"></div>
+          </div>
+          <div class="panel-f">
+            <p class="muted small" id="selReparto">Elige al menos un tema</p>
+            <button class="btn big" id="btnGenerar" disabled>Empezar examen →</button>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ================= EXAMEN ================= -->
+  <section id="vExamen" hidden>
+    <div class="exam-bar">
+      <div>
+        <h2>Examen</h2>
+        <div class="muted small" id="examInfo"></div>
+      </div>
+      <div class="progreso">
+        <span id="progTxt">0 / 20 respondidas</span>
+        <div class="prog"><div id="progBar"></div></div>
+      </div>
+    </div>
+    <ol id="preguntas" class="preguntas"></ol>
+    <div class="bottom-bar">
+      <button class="btn ghost" id="btnCancelar">Salir</button>
+      <span class="muted small hide-m">Las preguntas en blanco no restan.</span>
+      <button class="btn" id="btnCorregir">Corregir examen</button>
+    </div>
+  </section>
+
+  <!-- ================= RESULTADOS ================= -->
+  <section id="vResultado" hidden>
+    <div class="res-top">
+      <div class="score">
+        <svg viewBox="0 0 120 120" class="ring"><circle cx="60" cy="60" r="52" class="ring-bg"/><circle cx="60" cy="60" r="52" class="ring-fg" id="ringFg"/></svg>
+        <div class="score-n"><span id="nota">0</span><small>/10</small></div>
+      </div>
+      <div class="res-info">
+        <div class="nota-txt" id="notaTxt"></div>
+        <div class="stats" id="stats"></div>
+        <div class="res-btns">
+          <button class="btn" id="btnRepetir">Otro examen igual</button>
+          <button class="btn ghost" id="btnVolver">Cambiar temas</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="res-grid">
+      <div class="card">
+        <h3>Por tema</h3>
+        <div id="desglose"></div>
+      </div>
+      <div class="card" id="repaso"></div>
+    </div>
+
+    <div class="tabs" id="filtro">
+      <button data-f="todas" class="on">Todas</button>
+      <button data-f="mal">Fallos y en blanco</button>
+      <button data-f="ok">Acertadas</button>
+    </div>
+    <ol id="correccion" class="preguntas"></ol>
+  </section>
+</main>
+
+<!-- ================= PERSONALIZACIÓN ================= -->
+<div class="modal" id="ajustes" hidden>
+  <div class="modal-in" role="dialog" aria-modal="true" aria-labelledby="ajTit">
+    <div class="modal-h"><h2 id="ajTit">Personalizar</h2><button class="icon-btn" id="ajustesCerrar" aria-label="Cerrar">✕</button></div>
+    <h3>Color</h3>
+    <div class="sws" id="optColor"></div>
+    <h3>Modo</h3>
+    <div class="seg" id="optModo" data-pref="modo">
+      <button data-v="auto">Automático</button><button data-v="light">☀ Claro</button><button data-v="dark">☾ Oscuro</button>
+    </div>
+    <h3>Tamaño de letra</h3>
+    <div class="seg" id="optLetra" data-pref="letra">
+      <button data-v="peq">A−</button><button data-v="normal">A</button><button data-v="grande">A+</button>
+    </div>
+    <div class="modal-f"><button class="lnk" id="ajustesReset">Restablecer</button><span class="muted small">Se guarda en este navegador</span></div>
+  </div>
+</div>
+
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
