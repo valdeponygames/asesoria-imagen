@@ -299,7 +299,7 @@
     $("ringFg").style.strokeDasharray = C; $("ringFg").style.strokeDashoffset = C * (1 - nota / 10);
     document.querySelector(".score").className = "score " + (nota >= 5 ? "aprob" : "susp");
     $("notaTxt").textContent = nota >= 9 ? "¡Sobresaliente!" : nota >= 7 ? "¡Notable!" : nota >= 5 ? "Aprobado" : "Toca repasar";
-    $("stats").innerHTML = '<span class="s ok">✓ ' + ok + ' aciertos</span><span class="s mal">✕ ' + mal + ' fallos</span><span class="s bl">○ ' + bl + ' en blanco</span>';
+    $("stats").innerHTML = '<span class="s ok">✓ ' + ok + (ok === 1 ? ' acierto' : ' aciertos') + '</span><span class="s mal">✕ ' + mal + (mal === 1 ? ' fallo' : ' fallos') + '</span><span class="s bl">○ ' + bl + ' en blanco</span>';
 
     var ks = Object.keys(porTema).sort(function (a, b) { return porTema[a].ok / porTema[a].total - porTema[b].ok / porTema[b].total; });
     $("desglose").innerHTML = ks.map(function (k) {
@@ -334,6 +334,15 @@
   function filtrar(f) {
     [].forEach.call($("filtro").children, function (b) { b.classList.toggle("on", b.dataset.f === f); });
     $("correccion").setAttribute("data-f", f);
+    // Oculta el contexto de un caso si ninguna de sus preguntas queda visible con el filtro.
+    [].forEach.call($("correccion").querySelectorAll(".caso-ctx"), function (ctx) {
+      var vis = false, n = ctx.nextElementSibling;
+      while (n && n.classList.contains("de-caso")) {
+        if (f === "todas" || f === (n.classList.contains("ok") ? "ok" : "mal")) vis = true;
+        n = n.nextElementSibling;
+      }
+      ctx.hidden = !vis;
+    });
   }
   $("filtro").addEventListener("click", function (e) { var b = e.target.closest("button"); if (b) filtrar(b.dataset.f); });
   $("btnRepetir").onclick = generar;
