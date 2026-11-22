@@ -397,3 +397,7 @@ label.opt:has(input:disabled) { cursor: default; }
 .qid.copiado { color: var(--ok); }
 .preg-h .est { margin-left: 0; }
 .tf.tf-c .tf-t { font-style: italic; }
+
+/* Botón de ayuda (guía) */
+a.icon-btn { color: var(--txt); text-decoration: none; font-weight: 700; }
+@media (max-width: 560px) { .top-r { gap: 8px; } }
