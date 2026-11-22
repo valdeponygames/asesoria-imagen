@@ -364,3 +364,36 @@ label.opt:has(input:disabled) { cursor: default; }
   .urow { flex-wrap: wrap; } .u-acc { width: 100%; justify-content: flex-start; }
   .ad-search { max-width: none; width: 100%; }
 }
+
+/* ================= Casos prácticos ================= */
+.topic-w { display: flex; flex-direction: column; min-width: 0; }
+.topic-w .topic:has(+ .caso-btn) { border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
+.caso-btn { display: flex; align-items: center; gap: 8px; text-align: left; border: 1px solid var(--line); border-top: 1px dashed var(--line);
+  background: var(--card); border-radius: 0 0 12px 12px; padding: 7px 12px; font-size: .82rem; transition: background .12s, border-color .12s; }
+.caso-btn:hover { border-color: var(--acc); }
+.c-ico { width: 28px; text-align: center; flex-shrink: 0; }
+.c-txt { flex: 1; min-width: 0; font-weight: 600; }
+.c-txt small { font-weight: 400; color: var(--muted); margin-left: 4px; }
+.caso-btn .t-check { width: 18px; height: 18px; }
+.caso-btn.on { background: var(--acc-2); border-color: var(--acc); }
+.caso-btn.on .t-check { background: var(--acc); border-color: var(--acc); }
+.caso-btn.on .t-check::after { content: "✓"; color: var(--on-acc); font-size: .65rem; font-weight: 800; }
+.mini-chip.chip-caso { background: color-mix(in srgb, var(--acc) 26%, var(--card)); }
+
+.caso-ctx { list-style: none; background: var(--acc-2); border: 1px solid color-mix(in srgb, var(--acc) 40%, var(--line)); border-radius: var(--r);
+  padding: 16px 18px; margin: 22px 0 10px; }
+.cc-h { display: flex; gap: 12px; align-items: flex-start; }
+.cc-ico { font-size: 1.4rem; line-height: 1; }
+.cc-t { flex: 1; min-width: 0; }
+.cc-k { font-size: .75rem; font-weight: 700; color: var(--acc); text-transform: uppercase; letter-spacing: .04em; }
+.cc-t h3 { margin-top: 2px; font-size: 1.05rem; }
+.caso-ctx p { margin: 10px 0 8px; line-height: 1.55; }
+.qid-c { font-size: .72rem; color: var(--muted); font-family: ui-monospace, Consolas, monospace; }
+.preg.de-caso { border-left: 3px solid color-mix(in srgb, var(--acc) 55%, transparent); }
+
+.qid { margin-left: auto; border: 0; background: none; padding: 2px 6px; border-radius: 6px; font-size: .72rem; color: var(--muted);
+  font-family: ui-monospace, Consolas, monospace; }
+.qid:hover { background: var(--bg); color: var(--acc); }
+.qid.copiado { color: var(--ok); }
+.preg-h .est { margin-left: 0; }
+.tf.tf-c .tf-t { font-style: italic; }

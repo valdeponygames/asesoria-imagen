@@ -6,7 +6,15 @@
 
   var BANCO = { datos: {} };
   window.BANCO = BANCO;
+  BANCO.casos = {};
   BANCO.add = function (asig, tema, preguntas) { BANCO.datos[asig + "_" + tema] = preguntas; };
+  // Casos prácticos: sección aparte de cada tema. Se guardan como banco "asig_n_c" (preguntas aplanadas,
+  // cada una con el índice de su caso en la posición 7) y la lista de casos en BANCO.casos.
+  window.CASOS = { add: function (asig, tema, casos) {
+    var k = asig + "_" + tema + "_c", plano = [];
+    casos.forEach(function (c, ci) { c.preguntas.forEach(function (q) { plano.push(q.slice(0, 7).concat([ci])); }); });
+    BANCO.casos[k] = casos; BANCO.datos[k] = plano;
+  } };
 
   var ICONOS = { protocolo: "🎩", comunicacion: "💬", estilismo: "👗", estetica: "💄", peluqueria: "✂️", empleabilidad: "🦺", ampliacion: "📈" };
   var CORTO = { protocolo: "Protocolo", comunicacion: "Hab. comunicativas", estilismo: "Estilismo", estetica: "Asesoría estética",
@@ -24,22 +32,29 @@
   function asigPorId(id) { for (var i = 0; i < ASIGNATURAS.length; i++) if (ASIGNATURAS[i].id === id) return ASIGNATURAS[i]; }
   function norm(s) { return s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, ""); }
   function claves(a) { return a.temas.map(function (_, i) { return a.id + "_" + (i + 1); }).filter(function (k) { return BANCO.datos[k]; }); }
+  function clavesC(a) { return a.temas.map(function (_, i) { return a.id + "_" + (i + 1) + "_c"; }).filter(function (k) { return BANCO.datos[k]; }); }
+  function todasClaves(a) { var r = []; claves(a).forEach(function (k) { r.push(k); if (BANCO.datos[k + "_c"]) r.push(k + "_c"); }); return r; }
+  function esCaso(k) { return /_c$/.test(k); }
   function fuenteHTML(p) {
     var a = asigPorId(p.asig);
     return '<div class="fuente"><span class="f-i">📖</span><span><strong>' + esc(a.nombre) + '</strong> · Tema ' + p.tema + ': ' +
-      esc(a.temas[p.tema - 1]) + ' · <span class="pag">Página ' + p.pag + '</span></span></div>';
+      esc(a.temas[p.tema - 1]) + (p.caso ? ' · Caso práctico «' + esc(p.caso.titulo) + '»' : "") +
+      ' · <span class="pag">Página ' + p.pag + '</span></span></div>';
   }
+  function idHTML(p) { return p.id ? '<button type="button" class="qid" data-id="' + esc(p.id) + '" title="Copiar el código de la pregunta">#' + esc(p.id) + '</button>' : ""; }
 
   // ---------- Carga de datos ----------
   function cargarDatos(cb) {
     var pend = 0;
     ASIGNATURAS.forEach(function (a) {
       a.temas.forEach(function (_, i) {
-        pend++;
-        var s = document.createElement("script");
-        s.src = "data/" + a.id + "_t" + (i + 1) + ".js";
-        s.onload = s.onerror = function () { if (--pend === 0) cb(); };
-        document.head.appendChild(s);
+        ["", "_casos"].forEach(function (suf) {
+          pend++;
+          var s = document.createElement("script");
+          s.src = "data/" + a.id + "_t" + (i + 1) + suf + ".js";
+          s.onload = s.onerror = function () { if (--pend === 0) cb(); };
+          document.head.appendChild(s);
+        });
       });
     });
   }
@@ -54,21 +69,27 @@
   function pintarAsignaturas() {
     var total = 0;
     $("asignaturas").innerHTML = ASIGNATURAS.map(function (a) {
-      var ks = claves(a), marcados = ks.filter(function (k) { return seleccion[k]; }).length;
+      var ks = todasClaves(a), marcados = ks.filter(function (k) { return seleccion[k]; }).length;
+      var nTemas = claves(a).length, temasMarc = claves(a).filter(function (k) { return seleccion[k] || seleccion[k + "_c"]; }).length;
       var estado = marcados === 0 ? "" : marcados === ks.length ? " full" : " partial";
       var temas = a.temas.map(function (t, i) {
         var k = a.id + "_" + (i + 1), q = BANCO.datos[k], n = q ? q.length : 0; total += n;
-        return '<button class="topic' + (seleccion[k] ? " on" : "") + '" data-k="' + k + '" aria-pressed="' + !!seleccion[k] + '"' +
+        var kc = k + "_c", cs = BANCO.casos[kc], nc = cs ? BANCO.datos[kc].length : 0; total += nc;
+        var txt = esc(norm(a.nombre + " " + t));
+        var bCaso = cs ? '<button class="caso-btn' + (seleccion[kc] ? " on" : "") + '" data-k="' + kc + '" aria-pressed="' + !!seleccion[kc] + '">' +
+          '<span class="c-ico">🧩</span><span class="c-txt">Casos prácticos <small>' + cs.length + (cs.length === 1 ? " caso · " : " casos · ") + nc + ' preguntas</small></span>' +
+          '<span class="t-check" aria-hidden="true"></span></button>' : "";
+        return '<div class="topic-w" data-txt="' + txt + '"><button class="topic' + (seleccion[k] ? " on" : "") + '" data-k="' + k + '" aria-pressed="' + !!seleccion[k] + '"' +
           (n ? "" : " disabled") + ' data-txt="' + esc(norm(a.nombre + " " + t)) + '">' +
           '<span class="t-num">' + (i + 1) + '</span>' +
           '<span class="t-txt">' + esc(t) + '<small>' + (n ? n + " preguntas" : "Sin preguntas") + '</small></span>' +
-          '<span class="t-check" aria-hidden="true"></span></button>';
+          '<span class="t-check" aria-hidden="true"></span></button>' + bCaso + '</div>';
       }).join("");
       return '<article class="asig' + estado + '" data-a="' + a.id + '">' +
         '<header class="asig-h">' +
           '<span class="asig-ico">' + (ICONOS[a.id] || "📘") + '</span>' +
           '<div class="asig-tit"><h3>' + esc(a.nombre) + '</h3><span class="muted small">' +
-            (marcados ? marcados + " de " + ks.length + " temas" : ks.length + " temas") + '</span></div>' +
+            (temasMarc ? temasMarc + " de " + nTemas + " temas" : nTemas + " temas") + '</span></div>' +
           '<button class="asig-all" data-asig="' + a.id + '" aria-pressed="' + (marcados === ks.length) + '">' +
             (marcados === ks.length ? "✓ Completa" : "Seleccionar todo") + '</button>' +
         '</header>' +
@@ -82,7 +103,7 @@
 
   function temasSeleccionados() {
     var r = [];
-    ASIGNATURAS.forEach(function (a) { claves(a).forEach(function (k) { if (seleccion[k]) r.push(k); }); });
+    ASIGNATURAS.forEach(function (a) { todasClaves(a).forEach(function (k) { if (seleccion[k]) r.push(k); }); });
     return r;
   }
 
@@ -97,7 +118,8 @@
   function pintarPanel() {
     var t = temasSeleccionados();
     $("btnGenerar").disabled = t.length === 0;
-    $("selCount").textContent = t.length + (t.length === 1 ? " tema" : " temas");
+    var hayC = t.some(esCaso), pal = hayC ? [" sección", " secciones"] : [" tema", " temas"];
+    $("selCount").textContent = t.length + (t.length === 1 ? pal[0] : pal[1]);
     $("panel").classList.toggle("activo", t.length > 0);
     [].forEach.call($("segN").children, function (b) { b.classList.toggle("on", +b.dataset.v === N); });
     $("swPractica").checked = !!prefs.inmediata;
@@ -108,24 +130,24 @@
       return;
     }
     var grupos = {};
-    t.forEach(function (k) { var p = k.split("_"); (grupos[p[0]] = grupos[p[0]] || []).push(+p[1]); });
+    t.forEach(function (k) { var p = k.split("_"); (grupos[p[0]] = grupos[p[0]] || []).push(k); });
     $("selList").innerHTML = Object.keys(grupos).map(function (id) {
       return '<div class="sel-g"><div class="sel-g-h">' + (ICONOS[id] || "") + ' ' + esc(CORTO[id] || asigPorId(id).nombre) + '</div>' +
-        '<div class="sel-chips">' + grupos[id].map(function (n) {
-          return '<button class="mini-chip" data-k="' + id + "_" + n + '" title="Quitar">T' + n + ' <span>×</span></button>';
+        '<div class="sel-chips">' + grupos[id].map(function (k) {
+          return '<button class="mini-chip' + (esCaso(k) ? " chip-caso" : "") + '" data-k="' + k + '" title="Quitar">T' + k.split("_")[1] + (esCaso(k) ? " 🧩" : "") + ' <span>×</span></button>';
         }).join("") + '</div></div>';
     }).join("");
     var base = Math.floor(N / t.length), resto = N % t.length;
     $("selReparto").textContent = t.length > N
       ? N + " preguntas de " + N + " temas al azar"
-      : N + " preguntas · " + (resto ? base + "–" + (base + 1) : base) + " por tema";
+      : N + " preguntas · " + (resto ? base + "–" + (base + 1) : base) + (hayC ? " por sección" : " por tema");
   }
 
   function aplicarFiltro() {
     var q = norm($("buscar").value.trim()), alguno = false;
     [].forEach.call(document.querySelectorAll(".asig"), function (card) {
       var vis = 0;
-      [].forEach.call(card.querySelectorAll(".topic"), function (b) {
+      [].forEach.call(card.querySelectorAll(".topic-w"), function (b) {
         var ok = !q || b.dataset.txt.indexOf(q) >= 0; b.hidden = !ok; if (ok) vis++;
       });
       card.hidden = vis === 0; if (vis) alguno = true;
@@ -137,10 +159,10 @@
   function cambio() { guardar("sel", seleccion); pintarAsignaturas(); }
 
   $("asignaturas").addEventListener("click", function (e) {
-    var b = e.target.closest(".topic, .asig-all"); if (!b || b.disabled) return;
-    if (b.classList.contains("topic")) { setTema(b.dataset.k, !seleccion[b.dataset.k]); }
+    var b = e.target.closest(".topic, .caso-btn, .asig-all"); if (!b || b.disabled) return;
+    if (!b.classList.contains("asig-all")) { setTema(b.dataset.k, !seleccion[b.dataset.k]); }
     else {
-      var ks = claves(asigPorId(b.dataset.asig)), todos = ks.every(function (k) { return seleccion[k]; });
+      var ks = todasClaves(asigPorId(b.dataset.asig)), todos = ks.every(function (k) { return seleccion[k]; });
       ks.forEach(function (k) { setTema(k, !todos); });
     }
     cambio();
@@ -148,7 +170,7 @@
   $("selList").addEventListener("click", function (e) { var b = e.target.closest(".mini-chip"); if (b) { setTema(b.dataset.k, false); cambio(); } });
   $("buscar").addEventListener("input", aplicarFiltro);
   $("btnLimpiar").onclick = function () { seleccion = {}; cambio(); };
-  $("btnTodo").onclick = function () { ASIGNATURAS.forEach(function (a) { claves(a).forEach(function (k) { setTema(k, true); }); }); cambio(); };
+  $("btnTodo").onclick = function () { ASIGNATURAS.forEach(function (a) { todasClaves(a).forEach(function (k) { setTema(k, true); }); }); cambio(); };
   $("btnAzar").onclick = function () {
     var todas = []; ASIGNATURAS.forEach(function (a) { todas = todas.concat(claves(a)); });
     seleccion = {}; barajar(todas).slice(0, 3).forEach(function (k) { setTema(k, true); }); cambio();
@@ -157,33 +179,57 @@
   $("swPractica").onchange = function () { prefs.inmediata = this.checked; guardarPrefs(); };
 
   // ================= EXAMEN =================
+  function itemDe(k, p) {
+    var partes = k.split("_"), it = { k: k, asig: partes[0], tema: +partes[1], pag: p[0], q: p[1], correcta: p[2],
+      opciones: barajar(p.slice(2, 6)), id: p[6] || "", resp: null };
+    if (esCaso(k)) { var c = BANCO.casos[k][p[7]]; it.caso = { id: c.id, titulo: c.titulo, contexto: c.contexto, pag: c.pag }; }
+    return it;
+  }
   function generar() {
-    var r = reparto(temasSeleccionados()), vistas = leer("vistas", {});
-    examen = [];
+    var r = reparto(temasSeleccionados()), vistas = leer("vistas", {}), unidades = [];
     Object.keys(r).forEach(function (k) {
-      var banco = BANCO.datos[k], partes = k.split("_");
-      var idx = barajar(banco.map(function (_, i) { return i; }));
-      idx.sort(function (x, y) { return (vistas[k + "_" + x] || 0) - (vistas[k + "_" + y] || 0); }); // primero las no vistas
-      idx.slice(0, r[k]).forEach(function (i) {
-        var p = banco[i];
-        vistas[k + "_" + i] = (vistas[k + "_" + i] || 0) + 1;
-        examen.push({ asig: partes[0], tema: +partes[1], pag: p[0], q: p[1], correcta: p[2], opciones: barajar(p.slice(2, 6)), resp: null });
-      });
+      var banco = BANCO.datos[k], clave = function (i) { return banco[i][6] || (k + "_" + i); };
+      var vis = function (i) { return vistas[clave(i)] || 0; };
+      if (esCaso(k)) {
+        // Casos prácticos: se eligen casos completos (primero los menos vistos) hasta cubrir el cupo.
+        var idxDe = function (ci) { return banco.map(function (p, i) { return p[7] === ci ? i : -1; }).filter(function (i) { return i >= 0; }); };
+        var media = function (ci) { var l = idxDe(ci); return l.reduce(function (s, i) { return s + vis(i); }, 0) / l.length; };
+        var casos = barajar(BANCO.casos[k].map(function (_, ci) { return ci; })), falta = r[k];
+        casos.sort(function (x, y) { return media(x) - media(y); });
+        casos.forEach(function (ci) {
+          if (falta <= 0) return;
+          var idx = idxDe(ci).slice(0, falta); falta -= idx.length;
+          unidades.push(idx.map(function (i) { vistas[clave(i)] = vis(i) + 1; return itemDe(k, banco[i]); }));
+        });
+      } else {
+        var idx = barajar(banco.map(function (_, i) { return i; }));
+        idx.sort(function (x, y) { return vis(x) - vis(y); }); // primero las no vistas
+        idx.slice(0, r[k]).forEach(function (i) { vistas[clave(i)] = vis(i) + 1; unidades.push([itemDe(k, banco[i])]); });
+      }
     });
     guardar("vistas", vistas);
-    examen = barajar(examen);
+    // Se barajan las unidades; las preguntas de un mismo caso quedan juntas tras su contexto.
+    examen = [].concat.apply([], barajar(unidades));
     pintarExamen();
     vista("vExamen");
   }
 
-  function etiqueta(p) { return '<span class="tag">' + (ICONOS[p.asig] || "") + " " + esc(CORTO[p.asig] || p.asig) + " · T" + p.tema + '</span>'; }
+  function etiqueta(p) { return '<span class="tag">' + (ICONOS[p.asig] || "") + " " + esc(CORTO[p.asig] || p.asig) + " · T" + p.tema + (p.caso ? " · 🧩 Caso" : "") + '</span>'; }
+  function contextoHTML(p, i) {
+    if (!p.caso || (i > 0 && examen[i - 1].caso && examen[i - 1].caso.id === p.caso.id)) return "";
+    var n = examen.filter(function (x) { return x.caso && x.caso.id === p.caso.id; }).length;
+    return '<li class="caso-ctx"><div class="cc-h"><span class="cc-ico">🧩</span><div class="cc-t"><span class="cc-k">Caso práctico · ' +
+      esc(CORTO[p.asig] || p.asig) + " · T" + p.tema + '</span><h3>' + esc(p.caso.titulo) + '</h3></div>' +
+      '<span class="qid-c">#' + esc(p.caso.id) + '</span></div><p>' + esc(p.caso.contexto) + '</p><span class="muted small">Responde ' +
+      (n === 1 ? "la siguiente pregunta" : "las " + n + " preguntas siguientes") + ' a partir de este caso.</span></li>';
+  }
 
   function pintarExamen() {
     var n = {}; examen.forEach(function (p) { n[p.asig] = 1; });
     $("examInfo").textContent = examen.length + " preguntas · " + Object.keys(n).map(function (id) { return CORTO[id]; }).join(", ") +
       (prefs.inmediata ? " · modo práctica" : "");
     $("preguntas").innerHTML = examen.map(function (p, i) {
-      return '<li class="preg" id="q' + i + '"><div class="preg-h"><span class="q-n">' + (i + 1) + '</span>' + etiqueta(p) + '</div>' +
+      return contextoHTML(p, i) + '<li class="preg' + (p.caso ? " de-caso" : "") + '" id="q' + i + '"><div class="preg-h"><span class="q-n">' + (i + 1) + '</span>' + etiqueta(p) + idHTML(p) + '</div>' +
         '<p class="enun">' + esc(p.q) + '</p><div class="opts">' +
         p.opciones.map(function (o, j) {
           return '<label class="opt"><input type="radio" name="p' + i + '" data-i="' + i + '" data-j="' + j + '">' +
@@ -215,6 +261,14 @@
     }
   });
 
+  function copiarId(e) {
+    var b = e.target.closest(".qid"); if (!b) return;
+    e.preventDefault();
+    var t = b.dataset.id, ok = function () { b.classList.add("copiado"); b.textContent = "✓ copiado"; setTimeout(function () { b.classList.remove("copiado"); b.textContent = "#" + t; }, 1400); };
+    try { navigator.clipboard.writeText(t).then(ok, ok); } catch (x) { ok(); }
+  }
+  $("preguntas").addEventListener("click", copiarId);
+  $("correccion").addEventListener("click", copiarId);
   $("btnGenerar").onclick = generar;
   $("btnCancelar").onclick = function () { if (confirm("¿Salir del examen? Se perderán las respuestas.")) { pintarAsignaturas(); vista("vSeleccion"); } };
   $("btnCorregir").onclick = function () {
@@ -229,14 +283,14 @@
     examen.forEach(function (p) {
       p.estado = p.resp === null ? "blanco" : (p.opciones[p.resp] === p.correcta ? "ok" : "mal");
       if (p.estado === "ok") ok++; else if (p.estado === "mal") mal++; else bl++;
-      var k = p.asig + "_" + p.tema;
+      var k = p.k;
       var t = porTema[k] = porTema[k] || { p: p, ok: 0, total: 0, pags: {} };
       t.total++; if (p.estado === "ok") t.ok++; else t.pags[p.pag] = 1;
     });
     var nota = Math.round((ok / examen.length) * 100) / 10;
     var res = { nota: nota, n: examen.length, ok: ok, mal: mal, bl: bl, porTema: {} };
     examen.forEach(function (p) {
-      var k = p.asig + "_" + p.tema, t = res.porTema[k] = res.porTema[k] || { ok: 0, mal: 0, bl: 0, pags: {} };
+      var k = p.k, t = res.porTema[k] = res.porTema[k] || { ok: 0, mal: 0, bl: 0, pags: {} };
       if (p.estado === "ok") t.ok++; else { t[p.estado === "mal" ? "mal" : "bl"]++; t.pags[p.pag] = (t.pags[p.pag] || 0) + 1; }
     });
     pendiente = res; guardarResultado();
@@ -250,7 +304,7 @@
     var ks = Object.keys(porTema).sort(function (a, b) { return porTema[a].ok / porTema[a].total - porTema[b].ok / porTema[b].total; });
     $("desglose").innerHTML = ks.map(function (k) {
       var t = porTema[k], a = asigPorId(t.p.asig), pc = Math.round(100 * t.ok / t.total);
-      return '<div class="dg"><div class="dg-h"><span>' + (ICONOS[a.id] || "") + ' ' + esc(CORTO[a.id]) + ' · <strong>T' + t.p.tema + '</strong></span>' +
+      return '<div class="dg"><div class="dg-h"><span>' + (ICONOS[a.id] || "") + ' ' + esc(CORTO[a.id]) + ' · <strong>T' + t.p.tema + (esCaso(k) ? " 🧩 casos" : "") + '</strong></span>' +
         '<span class="muted">' + t.ok + '/' + t.total + '</span></div>' +
         '<div class="dg-bar ' + (pc >= 50 ? "b-ok" : "b-mal") + '"><span style="width:' + pc + '%"></span></div></div>';
     }).join("");
@@ -259,12 +313,12 @@
     $("repaso").innerHTML = '<h3>Qué repasar</h3>' + (fallos.length ? '<ul class="rep">' + fallos.map(function (k) {
       var t = porTema[k], a = asigPorId(t.p.asig);
       var pags = Object.keys(t.pags).map(Number).sort(function (x, y) { return x - y; });
-      return '<li><div><strong>' + esc(a.nombre) + '</strong></div><div class="muted small">Tema ' + t.p.tema + ': ' + esc(a.temas[t.p.tema - 1]) + '</div>' +
+      return '<li><div><strong>' + esc(a.nombre) + '</strong></div><div class="muted small">Tema ' + t.p.tema + ': ' + esc(a.temas[t.p.tema - 1]) + (esCaso(k) ? " · Casos prácticos" : "") + '</div>' +
         '<div class="pags">' + pags.map(function (n) { return '<span class="pg">pág. ' + n + '</span>'; }).join("") + '</div></li>';
     }).join("") + '</ul>' : '<p class="muted">¡Pleno! No hay nada que repasar. 🎉</p>');
 
     $("correccion").innerHTML = examen.map(function (p, i) {
-      return '<li class="preg ' + p.estado + '"><div class="preg-h"><span class="q-n">' + (i + 1) + '</span>' + etiqueta(p) +
+      return contextoHTML(p, i) + '<li class="preg ' + p.estado + (p.caso ? " de-caso" : "") + '"><div class="preg-h"><span class="q-n">' + (i + 1) + '</span>' + etiqueta(p) + idHTML(p) +
         '<span class="est est-' + p.estado + '">' + { ok: "Correcta", mal: "Fallada", blanco: "En blanco" }[p.estado] + '</span></div>' +
         '<p class="enun">' + esc(p.q) + '</p><div class="opts">' +
         p.opciones.map(function (o, j) {
@@ -390,7 +444,7 @@
   }
 
   // ---------- Estadísticas ----------
-  function infoTema(k) { var p = k.split("_"), a = asigPorId(p[0]); return a && a.temas[+p[1] - 1] ? { a: a, n: +p[1], t: a.temas[+p[1] - 1] } : null; }
+  function infoTema(k) { var p = k.split("_"), a = asigPorId(p[0]); return a && a.temas[+p[1] - 1] ? { a: a, n: +p[1], t: a.temas[+p[1] - 1] + (p[2] === "c" ? " · Casos prácticos" : "") } : null; }
   function nivel(pc) {
     return pc >= 80 ? { c: "dom", t: "Dominado", i: "★" } : pc >= 50 ? { c: "apr", t: "Aprobado", i: "✓" } : { c: "rep", t: "Repasar", i: "!" };
   }
@@ -482,12 +536,12 @@
 
     // Por asignatura
     var porAsig = ASIGNATURAS.map(function (a) {
-      var ks = claves(a), ok = 0, tot = 0;
+      var ks = todasClaves(a), ok = 0, tot = 0;
       var filas = ks.map(function (k) {
-        var t = u.temas[k], i = +k.split("_")[1];
-        if (!t || !totalT(t)) return '<div class="tf sin"><span class="tf-n">T' + i + '</span><span class="tf-t">' + esc(a.temas[i - 1]) + '</span><span class="tf-bar"></span><span class="tf-v muted">—</span><span class="nv nv-sin">○ Sin practicar</span></div>';
+        var t = u.temas[k], i = +k.split("_")[1], c = esCaso(k), nom = c ? "🧩 Casos prácticos" : a.temas[i - 1], tn = c ? "" : "T" + i;
+        if (!t || !totalT(t)) return '<div class="tf sin' + (c ? " tf-c" : "") + '"><span class="tf-n">' + tn + '</span><span class="tf-t">' + esc(nom) + '</span><span class="tf-bar"></span><span class="tf-v muted">—</span><span class="nv nv-sin">○ Sin practicar</span></div>';
         var pc = 100 * t.ok / totalT(t), nv = nivel(pc); ok += t.ok; tot += totalT(t);
-        return '<div class="tf"><span class="tf-n">T' + i + '</span><span class="tf-t">' + esc(a.temas[i - 1]) + '</span>' +
+        return '<div class="tf' + (c ? " tf-c" : "") + '"><span class="tf-n">' + tn + '</span><span class="tf-t">' + esc(nom) + '</span>' +
           '<span class="tf-bar"><span class="b-' + nv.c + '" style="width:' + pc + '%"></span></span>' +
           '<span class="tf-v">' + t.ok + '/' + totalT(t) + '</span>' + badge(nv) + '</div>';
       }).join("");

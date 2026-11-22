@@ -1,0 +1,21 @@
+CASOS.add("protocolo", 1, [
+{"id":"PRO1-C1","titulo":"La culpa es del jefe de protocolo","pag":6,
+"contexto":"Durante un acto de homenaje en el Congreso de los Diputados presidido por la Reina Letizia, nadie la estaba esperando en la entrada al llegar, como marca la normativa. Fue la propia Reina quien tuvo que esperar unos segundos a que la presidenta del Congreso, que actuaba como anfitriona, saliera a recibirla. La prensa recogió la imagen y se abrió el debate sobre quién tenía la culpa.",
+"preguntas":[
+[6,"¿En qué consistió el error protocolario de este caso?","En que la anfitriona no esperaba a la Reina en la entrada y la Reina tuvo que esperar","En que se colocó mal la bandera nacional","En que se usó un tratamiento incorrecto con la Reina","En que la Reina llegó tarde al acto","PRO1-C1-1"],
+[6,"¿Quién debía recibir a la Reina en la entrada en este acto?","La presidenta del Congreso, como anfitriona","El jefe de protocolo del Congreso","La vicepresidenta del Gobierno","Cualquier auxiliar de protocolo","PRO1-C1-2"],
+[6,"Según el tema, ¿se puede atribuir siempre la responsabilidad de un error así a un único profesional?","No, no siempre se puede atribuir a una sola persona","Sí, siempre es culpa del jefe de protocolo","Sí, siempre es culpa de la prensa","Sí, siempre es culpa de la anfitriona","PRO1-C1-3"],
+[7,"¿Qué conclusión extrae el tema de este caso?","La educación y la cortesía deben guiar a cualquier persona sin necesidad de recibir instrucciones","Los errores de protocolo no tienen importancia si duran poco","El jefe de protocolo nunca tiene responsabilidad","Solo importa lo que publique la prensa","PRO1-C1-4"],
+[7,"Aun así, ¿quién asume todas las responsabilidades relacionadas con su cargo?","El jefe de protocolo, como máximo responsable","La anfitriona exclusivamente","Los auxiliares de protocolo","Los periodistas presentes","PRO1-C1-5"],
+[7,"¿Por qué el tema considera llamativo este error en el ámbito institucional?","Porque todas las autoridades cuentan con asesores expertos que velan por el cumplimiento de la normativa","Porque nunca había ocurrido antes en ningún país","Porque la Reina no debía asistir","Porque el acto no era oficial","PRO1-C1-6"]]},
+{"id":"PRO1-C2","titulo":"Año Murillo","pag":8,
+"contexto":"El proyecto «Año Murillo» de Sevilla conmemoraba el cuarto centenario del nacimiento del pintor con un amplio programa de actividades. Para organizarlas se creó un departamento de protocolo propio. La pregunta es qué funciones se le encargaron a ese departamento.",
+"preguntas":[
+[9,"¿Cuál de estas fue una función del departamento de protocolo del «Año Murillo»?","Elaborar y actualizar la base de datos de autoridades y personalidades invitadas","Restaurar los cuadros del pintor","Vender entradas al público general","Diseñar el logotipo de la ciudad","PRO1-C2-1"],
+[9,"Planificar la ubicación de los invitados en cada espacio de celebración es:","El sistema de protocolización o seating","El cronograma","El briefing","El merchandising","PRO1-C2-2"],
+[9,"¿Qué gestionaba también el departamento respecto a las invitaciones?","El envío de invitaciones y entradas y las confirmaciones de asistencia","Solo la impresión de carteles","La venta de recuerdos","La contratación de artistas","PRO1-C2-3"],
+[9,"¿Con quién gestionaba el departamento las relaciones institucionales?","Con organismos y empresas patrocinadoras y colaboradoras","Solo con los vecinos del barrio","Con la competencia","Con agencias de viajes únicamente","PRO1-C2-4"],
+[9,"¿Qué documentos elaboraba el departamento sobre su trabajo?","Reportes o informes sobre el trabajo desarrollado y las incidencias","Facturas de venta al público","Catálogos de arte","Contratos laborales de los artistas","PRO1-C2-5"],
+[11,"Según la resolución, ¿qué perfil del equipo sustituiría al director o jefe de proyecto en caso de necesidad?","El técnico de protocolo senior","El auxiliar de protocolo","La secretaría administrativa","El técnico junior","PRO1-C2-6"],
+[11,"En el equipo propuesto, ¿quién se encargaría del envío y confirmación de invitaciones?","La secretaría o perfil administrativo","El director del proyecto","Los auxiliares de protocolo","Los técnicos junior","PRO1-C2-7"]]}
+]);
