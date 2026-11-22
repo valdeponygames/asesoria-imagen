@@ -88,5 +88,15 @@ BANCO.add("comunicacion", 1, [
 [11,"¿Qué requisito del asesor le permite intuir el interés del receptor e interpretar y medir sus respuestas?","Ser intuitivo y analítico","Ser creativo","Tener don de gentes","Estar informado"],
 [11,"Saber definir los mensajes de forma diferencial corresponde al requisito de:","Ser creativo","Ser analítico","Tener experiencia","Ser reactivo"],
 [11,"¿Por qué es importante la capacidad de autocrítica en un asesor de comunicación?","Porque una buena estrategia lleva al éxito y una mala puede llevar al fracaso","Porque así evita trabajar","Porque lo exige la ley","Porque así no necesita clientes"],
-[11,"Según el esquema resumen, ¿cuántos elementos tiene el proceso comunicativo?","Seis: emisor, receptor, mensaje, código, canal y contexto","Cuatro: emisor, receptor, mensaje y canal","Cinco: emisor, mensaje, código, canal y ruido","Tres: emisor, mensaje y receptor"]
+[11,"Según el esquema resumen, ¿cuántos elementos tiene el proceso comunicativo?","Seis: emisor, receptor, mensaje, código, canal y contexto","Cuatro: emisor, receptor, mensaje y canal","Cinco: emisor, mensaje, código, canal y ruido","Tres: emisor, mensaje y receptor"],
+[5,"El requisito de la comunicación que consiste en que el destinatario interprete el mensaje recibido es la:","Descodificación","Codificación","Transmisión","Retroalimentación"],
+[6,"En el proceso comunicativo, ¿de acuerdo con qué debe el receptor descodificar o interpretar el mensaje?","De acuerdo a un contexto","De acuerdo al canal elegido por el emisor únicamente","De acuerdo a la longitud del mensaje","De acuerdo a la hora del día"],
+[7,"Los antecedentes comunicativos entre emisor y receptor forman parte del:","Contexto","Código","Canal","Ruido técnico"],
+[7,"El espacio físico en el que se desarrolla una conversación es un elemento del:","Contexto","Mensaje","Código","Receptor"],
+[8,"La rinitis o la afonía de uno de los interlocutores es un ejemplo de barrera:","Fisiológica","Semántica","Física","Psicológica"],
+[8,"¿Cómo se denominan las barreras planificadas para evitar el proceso comunicativo?","Voluntarias","Involuntarias","Fisiológicas","Técnicas"],
+[9,"¿Qué es fundamental en los equipos de trabajo para cumplir las funciones y objetivos asignados?","La relación y coordinación de sus integrantes","Que cada miembro trabaje de forma aislada","Que no exista comunicación interna","Que solo el jefe tome la palabra"],
+[10,"¿Qué define el asesor de comunicación respecto a los mensajes de su cliente?","Los contenidos de los mensajes a comunicar","El precio de los productos de la empresa","El horario laboral de los empleados","La decoración de las oficinas"],
+[10,"Además de los mensajes, ¿qué elige el asesor de comunicación?","Las herramientas de comunicación para transmitirlos","El vestuario de todos los empleados","Los proveedores de material de oficina","Las vacaciones del cliente"],
+[10,"¿De qué tipos de comunicación define la estrategia el asesor de comunicación?","Interpersonal, social o empresarial","Solo de la comunicación intrapersonal","Únicamente de la publicidad en televisión","Solo de la correspondencia escrita"]
 ]);

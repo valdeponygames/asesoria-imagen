@@ -87,5 +87,16 @@ BANCO.add("empleabilidad", 4, [
 [11,"¿Qué concentración de solución salina debe incluir el botiquín?","0,9 %","9 %","0,1 %","90 %"],
 [11,"¿Cuál de estos elementos debe contener el botiquín?","Manta termoaislante","Medicamentos con receta","Alcohol de 96º en litros","Bisturí"],
 [11,"¿Qué guía de buenas prácticas se cita junto al RD 486/1997 sobre el botiquín?","NTP 458","NTP 100","ISO 9001","UNE 1"],
-[11,"¿Cada cuánto debe revisarse el botiquín?","Periódicamente","Nunca","Solo tras un accidente","Cada diez años"]
+[11,"¿Cada cuánto debe revisarse el botiquín?","Periódicamente","Nunca","Solo tras un accidente","Cada diez años"],
+[8,"Si el accidentado está consciente, ¿qué se hace?","Se atienden sus lesiones","Se inicia el masaje cardiaco","Se le coloca boca abajo","Se le deja solo"],
+[8,"Si el accidentado no está consciente, ¿qué se hace tras pedir ayuda urgente?","Abrir las vías respiratorias","Darle agua","Levantarlo de pie","Moverlo a otra sala"],
+[8,"¿Qué se hace si hay cuerpos extraños en la boca del accidentado durante la apertura de vías?","Extraerlos","Empujarlos hacia dentro","Ignorarlos","Darle de beber"],
+[8,"En la técnica «ver-oír-sentir», ¿qué se observa?","Que el pecho y el vientre se mueven con la entrada y salida de aire","El color de los ojos","El pulso en la muñeca","La temperatura de los pies"],
+[8,"Si el lesionado no respira, ¿qué hay que hacer?","Avisar rápidamente a emergencias o conseguir un desfibrilador e iniciar el masaje cardiaco","Colocarlo en PLS y esperar","Darle agua","Dejarlo sentado"],
+[8,"¿Qué incluyen las técnicas de soporte vital básico?","La reanimación cardiopulmonar y las medidas previas necesarias","Solo la colocación de vendajes","Únicamente la administración de medicamentos","El traslado en ambulancia"],
+[11,"¿Qué empresas de más de 25 trabajadores deben disponer de local de primeros auxilios?","Aquellas cuya actividad se considere peligrosa","Todas las empresas de oficinas","Ninguna","Solo las de hostelería"],
+[11,"¿Qué deben tener los locales de primeros auxilios además de su botiquín?","Una camilla y una fuente de agua potable","Una cocina","Un gimnasio","Una sala de reuniones"],
+[11,"¿Cuál de estos elementos debe contener el botiquín portátil?","Una manta termoaislante","Un desfibrilador obligatorio","Medicamentos con receta","Una camilla plegable"],
+[11,"¿Cuál de estos elementos debe contener al menos el botiquín portátil?","Bolsa de hielo sintético","Termómetro de mercurio","Jarabe para la tos","Analgésicos opioides"],
+[11,"¿Cuántos botiquines portátiles se recomienda tener como mínimo?","Al menos uno","Ninguno","Uno por trabajador obligatoriamente","Diez"]
 ]);

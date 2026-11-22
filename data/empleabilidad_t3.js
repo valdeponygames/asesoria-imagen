@@ -97,5 +97,6 @@ BANCO.add("empleabilidad", 3, [
 [12,"¿Es voluntaria la vigilancia de la salud para el trabajador?","Sí, salvo disposición legal o peligro para él o terceros","No, siempre obligatoria","Solo para directivos","Solo para mayores de 50 años"],
 [12,"¿Quién puede acceder a los datos de la vigilancia de la salud?","El propio trabajador, el personal y la autoridad sanitaria y los encargados de prevención","Cualquier compañero","Los clientes","La prensa"],
 [12,"¿Hasta cuándo debe mantenerse la vigilancia de la salud según el criterio de prolongada?","Incluso más allá de la finalización de la relación laboral","Solo durante el primer mes","Solo hasta el primer accidente","Solo durante la jornada"],
-[12,"¿Quién debe llevar a cabo la vigilancia de la salud?","Personal sanitario con competencia técnica, formación y capacidades acreditadas","El jefe directo","Cualquier compañero","El propio trabajador"]
+[12,"¿Quién debe llevar a cabo la vigilancia de la salud?","Personal sanitario con competencia técnica, formación y capacidades acreditadas","El jefe directo","Cualquier compañero","El propio trabajador"],
+[12,"¿Por quién debe llevarse a cabo la vigilancia de la salud de los trabajadores?","Por personal sanitario con competencia técnica, formación y capacidades acreditadas","Por el jefe de departamento","Por los propios compañeros","Por el departamento de ventas"]
 ]);

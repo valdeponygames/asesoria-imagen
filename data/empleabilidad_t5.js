@@ -82,5 +82,21 @@ BANCO.add("empleabilidad", 5, [
 [11,"¿Cuántas vías para encontrar oportunidades de empleo en Europa cita el tema?","Tres: EURES, EURAXESS y voluntariado","Dos","Cuatro","Cinco"],
 [8,"¿Cuál de estas es otra fuente de información sobre el sector profesional?","Los portales de empleo y la prensa especializada","Las películas de ficción","Los videojuegos","Las tiendas de deporte"],
 [7,"¿Qué comprende el sector de la administración según el tema?","Ocupaciones relacionadas con el funcionamiento de una empresa a escala de gestión","La investigación científica","La fabricación de ropa","La agricultura"],
-[5,"Desde 1980, ¿qué ha caracterizado a los contratos de trabajo españoles hasta la reforma de 2021?","La temporalidad","La estabilidad","El pleno empleo","El teletrabajo"]
+[5,"Desde 1980, ¿qué ha caracterizado a los contratos de trabajo españoles hasta la reforma de 2021?","La temporalidad","La estabilidad","El pleno empleo","El teletrabajo"],
+[4,"¿Por qué entornos está influido el mercado laboral según el tema?","Por el entorno económico, sociológico y tecnológico","Solo por el clima","Únicamente por la política exterior","Por ninguno, es estático"],
+[4,"Además de los ciclos económicos, ¿qué factor ha transformado el mercado laboral español desde 1970?","La llegada de inmigrantes","La desaparición de las empresas","El cierre de las universidades","La prohibición del trabajo femenino"],
+[4,"La subida del SMI es, según el tema, un factor que ha provocado cambios en:","El mercado laboral","El clima","La política exterior","Los planes de estudios de primaria"],
+[4,"¿Cómo se define la oferta de trabajo en el tema?","La suma de todos los empleos ofrecidos","Las necesidades de quienes buscan trabajo","El número de parados","El salario medio"],
+[4,"¿En qué términos se expresan las necesidades individuales de quienes buscan trabajo?","Horas de trabajo, habilidades y salario","Solo en número de vacaciones","En metros cuadrados de oficina","En número de hijos"],
+[4,"¿Por qué puede producirse la falta de equilibrio del mercado de trabajo?","Por un exceso de demanda o por un exceso de oferta","Solo por las vacaciones","Por el cambio de hora","Nunca se produce"],
+[4,"¿Qué ha contribuido al desequilibrio laboral en España en las últimas dos décadas, además del desempleo?","El aumento de la población activa","La reducción de la población","La desaparición del paro","El cierre de fronteras"],
+[4,"¿Qué es el desempleo no estructural según el tema?","El generado por cambios en la demanda de productos y servicios o por crisis","La falta de correspondencia entre competencias y exigencias del mercado","El paro voluntario","El trabajo a tiempo parcial"],
+[7,"¿Qué empleos forman el sector salud según el tema?","Los que producen bienes y servicios para mejorar la salud, como médicos o farmacéuticos","Los de la construcción","Los del transporte","Los de la agricultura"],
+[7,"¿Qué profesionales incluye el sector de ciencia e investigación?","Investigadores y técnicos de laboratorio","Agricultores","Camareros","Conductores"],
+[7,"¿Qué permite conocer el sector profesional respecto al currículo?","Mejorarlo adaptándolo al sector","Eliminarlo","Copiar el de otros","No enviarlo nunca"],
+[7,"Conocer el sector profesional ayuda a crear:","Una red de contactos","Una empresa obligatoriamente","Un sindicato","Una nueva ley"],
+[7,"¿Cuál de estos es uno de los seis puntos clave para conocer nuestro sector profesional?","Las normativas y regulación específicas de las profesiones del sector","El horóscopo laboral","Los gustos musicales de los empresarios","El precio de la vivienda"],
+[7,"Otro de los puntos clave para conocer nuestro sector es analizar:","La descripción de sus actividades, su tamaño y sus tendencias","El color de los uniformes","Los nombres de los directivos","Las vacaciones de los empleados"],
+[11,"Según el resumen, ¿qué estrategias se han analizado respecto a Europa?","Las estrategias europeas para la ocupación y las oportunidades de empleo","Las políticas de defensa","Los tratados comerciales con Asia","Las normas de tráfico"],
+[11,"Según el resumen, ¿qué encuesta se ha explicado en el tema?","La Encuesta de Población Activa","El censo agrario","La encuesta de presupuestos familiares","El barómetro del CIS"]
 ]);

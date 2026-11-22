@@ -89,5 +89,14 @@ BANCO.add("peluqueria", 4, [
 [13,"Según el resumen, ¿en qué se basa nuestro rol de director en esta fase?","En la comunicación honesta con el cliente y el ejercicio de guía estético con el equipo","En cortar el pelo","En cobrar","En vender productos"],
 [14,"Según el esquema resumen, ¿qué incluye la presentación de la propuesta?","Valoración, ejemplo y presupuesto","Potenciar y neutralizar","Dirigir y crear la ficha técnica","Cita y control"],
 [14,"Según el esquema resumen, si el cliente no aprueba la propuesta:","Fin del trabajo","Se ejecuta igualmente","Se cobra","Se repite la entrevista obligatoriamente"],
-[14,"Según el esquema resumen, ¿qué incluye la ejecución?","Dirigir el proceso y crear la ficha técnica","Valoración y presupuesto","Potenciar y neutralizar","Contacto y entrevista"]
+[14,"Según el esquema resumen, ¿qué incluye la ejecución?","Dirigir el proceso y crear la ficha técnica","Valoración y presupuesto","Potenciar y neutralizar","Contacto y entrevista"],
+[4,"¿Qué rasgos del cliente conviene potenciar según el tema?","Los estéticamente armónicos o los que forman parte esencial de su personalidad","Solo los que el asesor considere defectos","Ninguno, siempre hay que disimular","Los que estén de moda"],
+[4,"¿Qué debemos estimar antes de elaborar el presupuesto?","Las necesidades técnicas del trabajo y su valor económico","Solo el sueldo del asesor","El precio de la competencia","El tiempo de desplazamiento del cliente"],
+[8,"Una vez determinadas las características de la imagen del cliente, ¿qué hay que establecer?","Los procesos técnicos a los que se someterá el cabello","El color del local","La lista de invitados","El menú del evento"],
+[8,"¿Qué datos deben estar recopilados antes de asesorar a una clienta en peluquería femenina?","Las necesidades, el análisis estético y el estado del cabello","Solo su talla de ropa","Solo su presupuesto","Su historial laboral completo"],
+[10,"Según el tema, ¿qué podemos hacer con las características del rostro a través del peinado?","Potenciarlas, neutralizarlas y suavizarlas","Solo ocultarlas","Ignorarlas","Solo destacarlas"],
+[12,"¿Qué se recomienda en un rostro alargado para acortar su longitud?","Un flequillo que aporte horizontalidad","Un recogido muy alto","Eliminar todo el volumen lateral","Un corte con raya al medio sin flequillo"],
+[12,"¿Cuándo comienza la ejecución del cambio de imagen?","Cuando el cliente ha entendido y aprobado la propuesta","Antes de presentar la propuesta","Tras la primera llamada","Cuando lo decide el peluquero"],
+[12,"¿Cómo corrige ópticamente el corte de pelo?","Con el largo y el movimiento que aporta","Solo con el color","Con productos de fijación","No corrige nada"],
+[13,"¿Cómo debe comunicarse el asesor con su equipo de colaboradores según las buenas prácticas?","Desde la horizontalidad y la honestidad","Con autoritarismo","Solo por escrito","Sin comunicarse"]
 ]);

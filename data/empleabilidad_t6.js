@@ -84,5 +84,19 @@ BANCO.add("empleabilidad", 6, [
 [11,"¿Cuál de estas es una fuente de información sobre plazas en el sector público?","Portales especializados como www.empleopublico.net","Instagram","TikTok","Las ETT"],
 [11,"¿Qué otra fuente de información sobre plazas públicas cita el tema?","Webs de centros privados que preparan oposiciones","Redes personales","Revistas de moda","Agencias de viaje"],
 [5,"¿Dónde puede crearse una red de contactos según el tema?","En redes sociales especializadas como LinkedIn o en eventos como ferias y congresos","Solo en el SEPE","Solo en la familia","Solo en la escuela"],
-[4,"Según el tema, en el sector privado se puede realizar:","Cualquier actividad que permita la ley","Solo actividades públicas","Solo servicios","Solo producción"]
+[4,"Según el tema, en el sector privado se puede realizar:","Cualquier actividad que permita la ley","Solo actividades públicas","Solo servicios","Solo producción"],
+[4,"En el sector privado, ¿qué tipo de incentivos pueden existir en ocasiones?","De carácter económico o en especie","Solo días libres obligatorios","Plazas fijas de por vida","Exención de impuestos personal"],
+[4,"¿Qué controla la regulación existente en el sector privado?","La actividad económica propia de cada país","Los gustos de los consumidores","Las vacaciones de cada trabajador","El precio de todas las viviendas"],
+[4,"¿Qué ocurre cuando la búsqueda de empleo se realiza de forma organizada y planificada?","Es mucho más probable encontrar el trabajo deseado","Es imposible encontrar empleo","Se tarda siempre más","No influye en nada"],
+[4,"Para entrar en el proceso de selección, ¿qué debe hacer la empresa?","Valorar nuestro currículum y aceptarnos para participar","Contratarnos directamente","Pagarnos un adelanto","Publicar nuestro perfil"],
+[6,"¿Qué se describe en las ofertas de trabajo respecto a lo que ofrecerá la empresa?","La información relacionada con lo que ofrecerá al futuro trabajador","Los beneficios anuales de la empresa","El nombre de los demás candidatos","El historial de despidos"],
+[6,"Las ofertas de trabajo exponen los requisitos que la empresa exige a:","Los candidatos potenciales","Sus clientes","Sus proveedores","Sus accionistas"],
+[8,"¿Para qué utilizan LinkedIn también los trabajadores que ya tienen empleo?","Para mantenerse al día de nuevas tendencias y estar en contacto con comunidades y reclutadores","Para vender productos","Para jugar en línea","Para publicar fotos de vacaciones"],
+[8,"LinkedIn es una red social especializada en:","Las relaciones profesionales","Los videojuegos","La música","Las citas"],
+[11,"¿A qué tipo de empleo es una alternativa el empleo público?","Al empleo en el sector privado","Al trabajo voluntario","A la jubilación","Al estudio universitario"],
+[11,"¿Qué se indica en la convocatoria de una oposición respecto a la inscripción?","El plazo y las tasas a pagar, entre otras instrucciones","El salario de los examinadores","El nombre de los aprobados","La dirección de los candidatos"],
+[11,"Si el proceso de selección pública es por concurso, ¿qué instrucciones recoge la convocatoria?","Las instrucciones para presentar los méritos","Solo la fecha del examen oral","El menú del día del examen","Las vacaciones del tribunal"],
+[11,"¿En qué norma se basan los principios de igualdad, mérito y capacidad en la selección pública?","En la Constitución española","En el Código Civil únicamente","En una ordenanza municipal","En el convenio de cada empresa privada"],
+[11,"¿En función de qué se agrupan en categorías los empleos de la Administración del Estado?","Del puesto desempeñado","De la edad del funcionario","De la ciudad de nacimiento","Del orden alfabético"],
+[12,"Según el resumen, ¿qué red social se detalla especialmente en el tema?","LinkedIn","Instagram","TikTok","Facebook"]
 ]);

@@ -86,5 +86,17 @@ BANCO.add("peluqueria", 6, [
 [9,"Comprobar cuánto tarda el cuero cabelludo en recuperar su coloración es la técnica de:","Presión","Palpación","Movilización","Test del papel"],
 [9,"Absorber la grasa del cuero cabelludo con un papel es la técnica de:","Test del papel","Signo de Jaquet","Presión","Palpación"],
 [9,"Pellizcar la zona fronto-temporal es la técnica de:","Signo de Jaquet","Maniobra de Sabouraud","Movilización","Presión"],
-[3,"Según la introducción, ¿qué pueden alterar negativamente el estado saludable del cuero cabelludo?","Determinados tratamientos y hábitos","Solo la genética","Solo la edad","Nada"]
+[3,"Según la introducción, ¿qué pueden alterar negativamente el estado saludable del cuero cabelludo?","Determinados tratamientos y hábitos","Solo la genética","Solo la edad","Nada"],
+[4,"¿Qué facilita la riqueza en vasos sanguíneos del cuero cabelludo?","La alimentación del cabello","La caída del cabello","La aparición de canas","La sequedad de la piel"],
+[4,"¿En qué cavidades se implanta el cabello?","En los folículos pilosos","En las glándulas sudoríparas","En la hipodermis directamente","En los poros del cráneo"],
+[4,"Como barrera física, ¿qué protege el cuero cabelludo?","El hueso del cráneo","Las uñas","Los ojos","La columna vertebral"],
+[4,"¿Qué evita el manto hidrolipídico, además de proteger de agentes externos?","La pérdida de agua de la piel","El crecimiento del cabello","La sudoración","La renovación celular"],
+[5,"¿Qué ocurre con el estado natural y saludable del cuero cabelludo ante diferentes motivos?","Puede verse alterado","Nunca cambia","Mejora siempre","Solo cambia con la edad"],
+[5,"¿Qué entidad publica una guía sobre los cuidados del pelo de pacientes oncológicos citada en el tema?","La AECC","La OMS","La RAE","La DGT"],
+[5,"Según el enlace de la AECC, ¿en qué proceso puede acompañar el asesor a los pacientes oncológicos?","En la evolución física con la caída del cabello","En la elección del tratamiento médico","En el diagnóstico de la enfermedad","En la operación quirúrgica"],
+[6,"¿Qué zona de la piel atacan los hongos de la dermatofitosis?","La zona córnea","La hipodermis","Los huesos","Las glándulas sebáceas exclusivamente"],
+[7,"¿Qué tipo de factores alteran el equilibrio de la piel del cuero cabelludo, además de los individuales y ambientales?","Factores químicos","Factores musicales","Factores económicos","Factores políticos"],
+[10,"¿En qué temas se aprendió a crear y completar la ficha de registro del cliente de peluquería?","En los temas 2, 3 y 4","Solo en el tema 1","En el tema 6 exclusivamente","En ningún tema"],
+[10,"¿Por qué es necesario conocer las patologías previas del cliente?","Para saber qué problemas ha sufrido y sus posibles causas","Para cobrar más","Para publicarlas","Para decidir el color del tinte sin análisis"],
+[11,"Según el resumen, ¿a quién debe derivar el asesor las patologías del cuero cabelludo?","Al profesional médico especializado","Al peluquero","Al estilista de vestuario","Al nutricionista"]
 ]);

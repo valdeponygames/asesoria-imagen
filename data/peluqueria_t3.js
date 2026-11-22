@@ -85,5 +85,18 @@ BANCO.add("peluqueria", 3, [
 [10,"Firmar los contratos con terceros forma parte de las actuaciones con:","La documentación sensible","Los productos capilares","El mobiliario","La publicidad"],
 [4,"¿Qué se observa del cliente para conocer su estilo además de la ropa?","Cómo le gusta llevar el cabello peinado y si utiliza complementos","Su coche","Su teléfono","Su forma de caminar exclusivamente"],
 [8,"¿Para qué sirve valorar la información de 1 a 10?","Para cuantificar las necesidades del cliente antes de la propuesta","Para fijar el precio","Para puntuar al cliente","Para nada"],
-[6,"¿Qué tipo de necesidades se identifican con la pregunta sobre actividades que exigen un aspecto específico?","Artísticas y de otras actividades","Médicas","Familiares","Económicas"]
+[6,"¿Qué tipo de necesidades se identifican con la pregunta sobre actividades que exigen un aspecto específico?","Artísticas y de otras actividades","Médicas","Familiares","Económicas"],
+[4,"¿Cuándo comienza el protocolo de estudio estético en asesoría de peluquería?","Una vez el cliente decide ponerse en nuestras manos","Después de cobrar el servicio","Al terminar la ejecución","Antes del primer contacto"],
+[4,"La frente pertenece a la zona del rostro:","Alta","Media","Baja","Lateral"],
+[4,"La boca y el mentón pertenecen a la zona del rostro:","Baja","Alta","Media","Superior"],
+[4,"La nariz pertenece a la zona del rostro:","Media","Alta","Baja","Posterior"],
+[4,"Al observar el estilo del cliente, ¿qué se comprueba además de cómo viste?","Cómo le gusta llevar el cabello peinado y si usa complementos","Su nivel de estudios","Su estado civil","Su número de hijos"],
+[5,"¿Qué ayuda a hacer el proceso de identificación de demandas una vez obtenida la información?","Interpretar esa información recibida","Olvidar la entrevista","Evitar el cuestionario","Fijar el precio sin propuesta"],
+[5,"En el procedimiento de identificación de demandas, la reunión con el cliente para tratar su cabello es la:","Entrevista","Ficha de registro","Ejecución","Presentación"],
+[6,"¿Para qué sirve preguntar al cliente qué zona de su rostro destacaría?","Para saber qué rasgos quiere potenciar","Para calcular el presupuesto","Para elegir el champú","Para saber su edad"],
+[7,"¿Qué dato de la ficha de registro permite saber cuándo empezó la relación con el cliente?","La fecha de la primera visita","La profesión","La edad","El nombre"],
+[7,"¿Qué formato de ficha de registro permite trabajar sobre ella en línea?","El documento digital en línea y editable","El papel","El documento impreso","La tarjeta de visita"],
+[9,"¿Qué se crea a partir de la información aportada en los cuestionarios?","La ficha de evaluación del cliente","La factura","El muestrario de recogidos","El contrato con terceros"],
+[10,"¿Qué hay que realizar con la documentación sensible, entre otras actuaciones?","Un registro de actividades de tratamiento","Publicarla en redes sociales","Destruirla al día siguiente","Compartirla con otros clientes"],
+[10,"¿Qué se pretende al almacenar la documentación según está legislado?","Mantener la privacidad de los clientes","Venderla a otras empresas","Usarla en publicidad","Reducir el número de clientes"]
 ]);

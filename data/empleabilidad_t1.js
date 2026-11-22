@@ -85,5 +85,18 @@ BANCO.add("empleabilidad", 1, [
 [12,"En la modalidad delegada, si la actividad no es peligrosa, ¿cuál es el máximo de trabajadores?","500","250","50","1000"],
 [12,"¿Cuándo es obligatorio el servicio de prevención propio?","Con actividad peligrosa y más de 250 trabajadores, o no peligrosa con más de 500, o por decisión de la autoridad laboral","Siempre","Nunca","Con menos de 10 trabajadores"],
 [12,"¿En qué consiste el servicio de prevención externo?","En encargar la actividad preventiva a una empresa externa","En que el empresario la asuma","En designar trabajadores","En crear un departamento propio"],
-[12,"¿Cuándo se recurre al servicio de prevención externo?","Cuando las modalidades personal o delegada son insuficientes o por decisión propia si no es obligatorio el propio","Siempre que hay más de 10 trabajadores","Nunca","Solo en la Administración"]
+[12,"¿Cuándo se recurre al servicio de prevención externo?","Cuando las modalidades personal o delegada son insuficientes o por decisión propia si no es obligatorio el propio","Siempre que hay más de 10 trabajadores","Nunca","Solo en la Administración"],
+[4,"¿Por qué se presta especial atención a los riesgos laborales según el tema?","Porque gran parte de la vida de las personas está vinculada al trabajo","Porque solo afectan a los empresarios","Porque no tienen relación con la salud","Porque lo exige la moda"],
+[4,"La salud laboral es un área de trabajo de:","La salud pública","La contabilidad empresarial","El marketing","El derecho mercantil"],
+[4,"¿A quiénes abarca la promoción del bienestar que persigue la salud laboral?","A los trabajadores de todas las ocupaciones","Solo a los trabajadores de la construcción","Solo a los directivos","Solo a los funcionarios"],
+[4,"Las expectativas de futuro y el reconocimiento social del trabajador forman parte del bienestar:","Social","Físico","Mental","Económico"],
+[10,"Además del cumplimiento de las obligaciones del empresario, ¿qué requiere la eficacia en la prevención de riesgos?","El cumplimiento de obligaciones por parte del trabajador","Solo la inspección de trabajo","Únicamente seguros privados","Nada más"],
+[10,"Según el art. 29 de la LPRL, el trabajador debe velar por su seguridad y la de:","Otras personas a las que pueda afectar su trabajo","Solo su familia","Únicamente sus clientes","Nadie más"],
+[10,"¿Cómo debe usar el trabajador los equipos de protección que le proporciona el empresario?","De forma correcta, siguiendo sus instrucciones de uso","Solo cuando le apetezca","Modificándolos a su gusto","Prestándolos a terceros"],
+[10,"Utilizar adecuadamente las máquinas, herramientas y sustancias peligrosas es:","Una obligación del trabajador en prevención","Un derecho exclusivo del empresario","Una recomendación sin valor legal","Una tarea del servicio médico"],
+[10,"¿Con quién debe cooperar el trabajador para garantizar unas condiciones de trabajo seguras?","Con el empresario","Con la competencia","Con los clientes únicamente","Con nadie"],
+[10,"¿Qué debe hacer el trabajador respecto a las obligaciones fijadas por la autoridad competente?","Ayudar a cumplirlas","Ignorarlas","Denunciarlas siempre","Modificarlas"],
+[10,"¿Quién puede imponer sanciones disciplinarias al trabajador que incumple sus obligaciones de prevención?","La dirección de la empresa","Sus compañeros","Los clientes","El sindicato"],
+[10,"¿Cuándo debe informar el trabajador de una situación que pueda generar riesgo?","Lo antes posible","Al final del año","Solo si hay heridos","Nunca"],
+[13,"Según el resumen, ¿qué se ha explicado respecto al empresario y al trabajador en materia de prevención?","Sus derechos y deberes","Sus salarios","Sus horarios de vacaciones","Sus categorías profesionales"]
 ]);

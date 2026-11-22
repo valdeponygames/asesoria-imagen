@@ -86,5 +86,18 @@ BANCO.add("comunicacion", 5, [
 [10,"Según el resumen, ¿qué rol desempeña el portavoz ante los medios?","Intermediario","Moderador","Entrevistador","Espectador"],
 [10,"Según el resumen, ¿cuáles son las tres herramientas de comunicación pública más importantes?","El discurso, el debate y la entrevista","La carta, el email y el SMS","El foro, el panel y el simposio","La reunión, la asamblea y el diálogo"],
 [11,"Según el esquema resumen, el debate es:","La confrontación de dos posturas sobre un mismo tema mediante argumentación","La exposición de un tema con introducción, desarrollo y conclusión","Un diálogo de preguntas y respuestas","Una reunión de expertos"],
-[11,"Según el esquema resumen, la entrevista es:","Un diálogo de preguntas/respuestas entre entrevistador y entrevistado","La confrontación de dos posturas","La exposición de un tema","Una asamblea institucional"]
+[11,"Según el esquema resumen, la entrevista es:","Un diálogo de preguntas/respuestas entre entrevistador y entrevistado","La confrontación de dos posturas","La exposición de un tema","Una asamblea institucional"],
+[4,"Según el tema, ¿es lo mismo un discurso en el Congreso de los Diputados que un mitin político?","No, cada contexto exige un discurso distinto","Sí, ambos deben ser idénticos","Sí, porque los dos son políticos","Solo cambia la duración"],
+[4,"¿Por qué un discurso de un rector de universidad difiere de la bienvenida de un director de colegio?","Porque cambian el contexto y el público","Porque uno es escrito y otro no","Porque el rector nunca habla en público","Porque el colegio no admite discursos"],
+[4,"¿Qué trabajo previo debe realizar el emisor antes de dirigirse al público?","Un trabajo de investigación y segmentación","Un ensayo general con disfraz","Un examen escrito al público","Una votación entre los asistentes"],
+[4,"¿Qué ocurre en muchos casos con los públicos según el tema?","Que son públicos mixtos","Que nunca existen","Que son siempre especializados","Que solo son internos"],
+[5,"Generalmente, ¿ante quién habla el portavoz en nombre de su entidad?","Ante los medios de comunicación","Solo ante sus familiares","Únicamente ante los proveedores","Ante nadie, solo escribe"],
+[5,"¿Qué ocurriría si se cambiara constantemente de portavoz?","No generaría mucha confianza","Aumentaría la credibilidad de la empresa","Se ahorraría dinero","Mejoraría la imagen siempre"],
+[5,"¿Cómo debe transmitir los mensajes un portavoz?","De forma creíble y convincente","De forma ambigua para no comprometerse","Con el mayor número de tecnicismos","Leyendo sin mirar a nadie"],
+[5,"¿Qué tareas tiene el portavoz, entre otras?","Conceder declaraciones y entrevistas e intervenir en debates","Llevar la contabilidad de la empresa","Diseñar el logotipo","Contratar al personal de limpieza"],
+[7,"Respecto al tema de una conferencia, el orador:","A veces lo decide y otras se adapta a lo que le solicita quien le invita","Siempre lo elige libremente","Nunca puede conocerlo antes","Debe improvisarlo en el momento"],
+[8,"En un debate, ¿a quién intenta convencer cada participante con sus argumentos?","A los demás participantes y a los terceros que actúan como espectadores","Solo al moderador","Únicamente a sí mismo","A nadie, solo expone datos"],
+[8,"¿Qué imagen debe ofrecer el entrevistado?","De seguridad y control de la situación","De nerviosismo","De indiferencia","De prisa por terminar"],
+[10,"Según el tema, ¿es igual preparar un discurso de inauguración que uno de clausura o de brindis?","No, cada tipo de acto requiere una preparación distinta","Sí, se usa el mismo texto","Sí, solo cambia el título","Solo cambia el horario"],
+[10,"¿Qué aspecto técnico del espacio es fundamental al planificar una intervención?","Si se necesita apoyo audiovisual, conexión a internet o retransmisión en directo","El color de las paredes","La marca de las sillas","El número de ventanas"]
 ]);

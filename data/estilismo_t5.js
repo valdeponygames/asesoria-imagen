@@ -91,5 +91,12 @@ BANCO.add("estilismo", 5, [
 [9,"¿Con qué motivo adquirió Felipe II el diamante «El Estanque»?","Con motivo de su tercer matrimonio","Con motivo de su coronación","Con motivo de una victoria militar","Con motivo del nacimiento de su hijo"],
 [9,"¿A quién adquirió Felipe II el diamante «El Estanque»?","A un mercader flamenco","A un joyero florentino","A un comerciante americano","A un orfebre de Toledo"],
 [10,"Según el esquema resumen, ¿qué elemento corresponde a la Edad Media?","Tocados exagerados","Gorgueras","Cuchilladas","Faldas con verdugado"],
-[10,"Según el esquema resumen, ¿qué elemento corresponde al Renacimiento?","Mangas desmontables","Aparición de los sastres","Botones","Talle alto"]
+[10,"Según el esquema resumen, ¿qué elemento corresponde al Renacimiento?","Mangas desmontables","Aparición de los sastres","Botones","Talle alto"],
+[4,"¿Qué elemento para sujetar las prendas se comenzó a generalizar en la Edad Media?","Los botones","Las cremalleras","Los velcros","Los imperdibles metálicos modernos"],
+[4,"¿Qué sistema económico, político y social predominaba en la Edad Media?","El feudalismo","El capitalismo industrial","La democracia parlamentaria","El comunismo"],
+[4,"¿Qué influencia siguió patente en el vestuario durante los primeros siglos de la Edad Media?","La influencia bizantina","La influencia japonesa","La influencia azteca","La influencia de la moda americana"],
+[4,"Hacia el final de la Edad Media, frente a la influencia bizantina, surgieron:","Estilos propios nacionales","La moda prêt-à-porter","Los vaqueros","Las pasarelas internacionales"],
+[5,"A partir del siglo XII, ¿qué túnicas empezaron a lucir las clases altas medievales?","Túnicas ajustadas a la cadera","Túnicas cortas por encima de la rodilla","Túnicas sin mangas","Túnicas de pieles sin coser"],
+[5,"En las túnicas del siglo XII, ¿hasta dónde se ajustaban las mangas antes de alargarse?","Hasta la altura del codo","Hasta el hombro","Hasta la muñeca","No tenían mangas"],
+[9,"¿Qué adornos para el cabello con joyería se llevaban en el Renacimiento?","Diademas de oro con pedrería","Gorras de lana","Pinzas de plástico","Cintas de algodón sin adornos"]
 ]);

@@ -86,5 +86,17 @@ BANCO.add("protocolo", 3, [
 [11,"¿Quién nombra libremente a los tenientes de alcalde?","El alcalde","El Pleno","Los vecinos","La diputación"],
 [11,"¿Qué órgano es el de máxima representación política de los ciudadanos en el gobierno municipal?","El Pleno","La Junta de Gobierno Local","La Alcaldía","La asesoría jurídica"],
 [11,"¿Cuál de estos es un órgano directivo municipal dependiente del alcalde y de la Junta de Gobierno Local?","El interventor general municipal","El delegado del Gobierno","El presidente de la diputación","El subdelegado del Gobierno"],
-[12,"Según la tabla resumen, ¿qué norma regula el protocolo en el ámbito autonómico?","Los Estatutos de Autonomía","El Real Decreto 2099/1983","La Ley 7/1985","La Constitución exclusivamente"]
+[12,"Según la tabla resumen, ¿qué norma regula el protocolo en el ámbito autonómico?","Los Estatutos de Autonomía","El Real Decreto 2099/1983","La Ley 7/1985","La Constitución exclusivamente"],
+[4,"¿Quién debe conocer las normas de protocolo oficial según el tema?","Todo profesional del protocolo y la organización de eventos","Solo los jefes de Estado","Únicamente los funcionarios de Exteriores","Solo los alcaldes"],
+[5,"La Jefatura de Protocolo del Estado y el Servicio de Protocolo de Exteriores se coordinan para fijar la precedencia en:","Actos públicos internacionales organizados por el Estado","Actos privados de empresas","Bodas civiles","Actos deportivos locales"],
+[5,"Según el artículo 3, los actos de carácter general se organizan con ocasión de:","Acontecimientos nacionales, provinciales o locales","Acontecimientos propios de una empresa privada","Celebraciones familiares","Ferias comerciales internacionales"],
+[5,"Según el artículo 5, en actos generales organizados por la Administración Local, además del Ordenamiento puede tenerse en cuenta:","La tradición del lugar","La opinión de la prensa","El orden de llegada de los invitados","La edad de las autoridades"],
+[8,"Según el orden original del artículo 15, ¿qué Ministerio sigue al de Asuntos Exteriores?","Justicia","Defensa","Interior","Hacienda"],
+[8,"Según el orden original del artículo 15, ¿qué Ministerio sigue al de Justicia?","Defensa","Economía","Educación","Sanidad y Consumo"],
+[8,"En el orden original del artículo 15, ¿qué Ministerio va inmediatamente antes que Interior?","Economía","Defensa","Trabajo","Cultura"],
+[8,"En el orden original del artículo 15, ¿qué Ministerio va inmediatamente después de Educación?","Trabajo","Industria","Agricultura","Obras Públicas"],
+[9,"Un tipo de competencias compartidas entre el Estado y las Comunidades es el de las:","Legisladas por el Estado y ejecutadas por las Comunidades","Legisladas y ejecutadas solo por los ayuntamientos","Legisladas por la Unión Europea y ejecutadas por las provincias","Legisladas por las Comunidades y ejecutadas por el Rey"],
+[9,"¿Quién determina el orden del día, la fecha y el lugar de la reunión de la Conferencia de presidentes?","La convocatoria del presidente del Gobierno","Cada presidente autonómico por separado","El Rey","El Senado"],
+[9,"¿En qué caso puede no asistir personalmente un presidente autonómico a la Conferencia?","Cuando un consejero ejerce temporalmente las funciones de presidente autonómico","Cuando prefiere enviar a un asesor","Siempre que lo comunique con un día de antelación","Cuando la reunión es ordinaria"],
+[11,"¿Qué entidades locales menores quedan por detrás del municipio en precedencia según la Ley 7/1985?","Caseríos, parroquias, aldeas, barrios o pedanías","Las Comunidades Autónomas","Las provincias","Las Delegaciones del Gobierno"]
 ]);

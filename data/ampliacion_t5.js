@@ -83,5 +83,20 @@ BANCO.add("ampliacion", 5, [
 [9,"¿Cuál es un inconveniente de la banca electrónica?","No permite disponer de efectivo","Ahorra tiempo","Es flexible","Es rápida"],
 [9,"¿Qué otro inconveniente de la banca electrónica cita el tema?","La falta de contacto humano","El ahorro de tiempo","La rapidez","El bajo coste"],
 [10,"¿Qué producto de ahorro podría contratar Paloma para financiar sus estudios?","Un plan de ahorro destinado a pagar los estudios","Una tarjeta de crédito","Un derivado","Acciones"],
-[10,"Si Paloma pide un préstamo personal, ¿qué necesitará para que el banco se lo conceda?","Alguna fuente de ingresos o un avalista","Nada","Un piso en propiedad","Un título universitario"]
+[10,"Si Paloma pide un préstamo personal, ¿qué necesitará para que el banco se lo conceda?","Alguna fuente de ingresos o un avalista","Nada","Un piso en propiedad","Un título universitario"],
+[4,"¿Qué ofrecen las entidades financieras para ayudar a gestionar nuestras finanzas?","Una enorme diversidad de productos financieros","Solo cuentas corrientes","Únicamente préstamos hipotecarios","Ningún producto"],
+[4,"¿De qué flujos de dinero se ocupan las finanzas?","De los asociados a inversiones, financiación, cobros y pagos","Solo de los impuestos","Únicamente de los salarios","Solo del comercio exterior"],
+[4,"¿Para qué es importante la gestión financiera en una empresa?","Para planificar las entradas y salidas de dinero y optimizar sus resultados","Para elegir el logotipo","Para contratar personal","Para decorar las oficinas"],
+[4,"Según el tema, ¿qué fomenta el FMI además del comercio internacional?","La estabilidad cambiaria","El turismo rural","La educación primaria","La producción agrícola"],
+[5,"¿Qué ventaja del presupuesto personal se refiere a las deudas?","Facilita el pago de las deudas en plazo","Elimina todas las deudas","Impide endeudarse","Duplica las deudas"],
+[5,"¿Qué permite identificar el presupuesto personal respecto a los gastos?","Los gastos innecesarios","Los gastos de otras personas","Solo los gastos de ocio","Ningún gasto"],
+[5,"¿Qué ingresos ordinarios pueden incluirse en el presupuesto además del salario neto?","Rendimientos por alquileres u otras rentas","Premios de lotería","Regalos de cumpleaños","Herencias futuras"],
+[5,"¿Qué conviene diferenciar al anotar los ingresos en el presupuesto personal?","Los ingresos ordinarios de los extraordinarios","Los ingresos en efectivo de los digitales","Los ingresos de la mañana y de la tarde","Nada, todos son iguales"],
+[5,"La matrícula escolar anual se considera en el presupuesto como:","Otros gastos o gastos extraordinarios","Gasto básico diario","Ingreso","Ahorro"],
+[5,"¿Cuál de estos consejos para el presupuesto personal se refiere al pasado?","Revisar el histórico","Hacer cálculos realistas","Destinar una parte para ahorrar","Tener las deudas claras"],
+[5,"Calcular la capacidad de endeudamiento y hacer previsiones es:","Un consejo para elaborar el presupuesto personal","Un producto de inversión","Un gasto básico","Una obligación del banco"],
+[5,"¿Qué consejo implica cumplir el presupuesto una vez elaborado?","Seguirlo con rigurosidad","Ignorarlo","Cambiarlo cada día sin motivo","Romperlo a fin de mes"],
+[5,"Los impuestos y los seguros forman parte de los:","Gastos básicos","Ingresos extraordinarios","Ahorros","Otros gastos"],
+[5,"¿Cómo se estructura la información en un presupuesto personal?","Reflejando todos los ingresos y gastos de manera estructurada","Solo con los gastos","Solo con los ingresos","Sin ningún orden"],
+[11,"Según el resumen, ¿qué productos se han descrito además de los de ahorro e inversión?","Los productos de gasto","Los productos de alimentación","Los productos textiles","Los productos farmacéuticos"]
 ]);

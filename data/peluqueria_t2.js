@@ -85,5 +85,18 @@ BANCO.add("peluqueria", 2, [
 [3,"¿Qué figura ilustra la introducción del tema de documentación?","Asesora y clientes viendo tablet","Novia en el tocador","Azafata","Backstage"],
 [12,"Según el resumen, ¿cómo es la documentación que sirve de referencia?","Muy variada y en diferentes formatos","Única y en papel","Solo digital","Solo técnica"],
 [6,"Pinterest permite organizar colecciones de imágenes en:","Tableros personales temáticos","Hojas de cálculo","Carpetas de correo","Diapositivas"],
-[4,"La base de información de patrones estéticos sirve para obtener:","Referencias visuales y trabajar de forma más sencilla","Contratos","Facturas","Permisos"]
+[4,"La base de información de patrones estéticos sirve para obtener:","Referencias visuales y trabajar de forma más sencilla","Contratos","Facturas","Permisos"],
+[5,"Además de en papel, ¿dónde se pueden consultar contenidos útiles para documentarse en peluquería?","En páginas web","Solo en bibliotecas universitarias","En la radio","En los periódicos deportivos"],
+[6,"Para la parte digital del muestrario, ¿qué tipo de herramientas conviene usar?","Herramientas con opciones completas que permitan incluir gráficos, texto o voz","Solo una calculadora","Únicamente el correo postal","Herramientas sin imágenes"],
+[6,"¿Para qué sistemas operativos interrelaciona aplicaciones la suite Office según el tema?","Windows, Mac OS X, iOS y Android","Solo Linux","Solo consolas de videojuegos","Ninguno"],
+[6,"¿Cuántos vectores, gráficos y fuentes ofrece Canva según el tema?","5 millones","60 millones","500","1.000 millones"],
+[6,"¿Es obligatorio usar solo técnicas digitales para elaborar el muestrario?","No, se pueden combinar analógicas y digitales o usar una sola","Sí, solo digitales","Sí, solo analógicas","Solo se permite el papel"],
+[9,"Las coloraciones del muestrario se clasifican como parciales, totales y:","De diferentes tipos","Solo rubias","Solo permanentes","Solo vegetales"],
+[9,"¿Qué significa ordenar las coloraciones por altura de tono?","Ordenarlas por la oscuridad del cabello","Ordenarlas por precio","Ordenarlas por marca","Ordenarlas por fecha"],
+[10,"¿Qué se muestra en el muestrario de extensiones y pelucas tras el catálogo de tipos?","Las imágenes con los cambios","Los precios de fábrica","Los materiales de fijación","Las instrucciones de lavado"],
+[10,"¿En qué producciones son grandes aliadas la posticería y las pelucas según el tema?","En moda, ficción o música","Solo en informativos","En deportes","En la radio"],
+[11,"¿Qué recoge el muestrario de peinados?","Diferentes acabados de peinado del cabello","Solo cortes masculinos","Solo coloraciones","Las tarifas del salón"],
+[11,"¿Para qué se organiza el muestrario de recogidos por alturas?","Para que sea fácil y práctico trabajar con él","Para que ocupe menos papel","Para cumplir una ley","Para ocultar opciones al cliente"],
+[11,"¿Qué se enseña al cliente con el muestrario de recogidos?","Los diferentes acabados del cabello recogido que podemos realizarle","Solo cortes de pelo corto","Coloraciones de fantasía","Pelucas completas"],
+[12,"Según el resumen, ¿para qué sirven también los documentos gráficos durante la ejecución?","Para guiar al equipo de colaboradores","Para cobrar al cliente","Para decorar el salón","Para la publicidad en redes"]
 ]);

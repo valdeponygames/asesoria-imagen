@@ -92,5 +92,11 @@ BANCO.add("estetica", 6, [
 [10,"¿A qué se destinan los tratamientos antienvejecimiento?","A corregir la deshidratación, reducir manchas, regenerar la epidermis y reducir la flacidez","A controlar la grasa","A eliminar vello","A broncear"],
 [10,"¿Qué permite la exfoliación de la piel?","Retirar las células muertas, promoviendo la regeneración celular","Aumentar la grasa","Broncear","Eliminar el vello"],
 [10,"Según el resumen, ¿en qué capa se anclan los anejos cutáneos?","En la capa intermedia (dermis)","En la epidermis","En la hipodermis","En el manto ácido"],
-[10,"Según el resumen, ¿de qué depende el tipo de piel de cada persona?","De su fototipo, hidratación, secreción sebácea y firmeza","Solo de la edad","Del maquillaje","De la ropa"]
+[10,"Según el resumen, ¿de qué depende el tipo de piel de cada persona?","De su fototipo, hidratación, secreción sebácea y firmeza","Solo de la edad","Del maquillaje","De la ropa"],
+[5,"¿Dónde crecen los pelos según el tema?","En las invaginaciones dérmicas implantadas profundamente en la dermis","En la superficie de la epidermis sin raíz","En la hipodermis exclusivamente","En las glándulas sudoríparas"],
+[6,"¿Qué aspectos del estilo de vida se preguntan en la entrevista del diagnóstico porque afectan al aspecto cutáneo?","Los cosméticos que emplea, su dieta y sus horas de sueño","Su profesión anterior y su salario","Sus aficiones musicales","Su lugar de vacaciones favorito"],
+[6,"¿Qué se obtiene con el examen visual y táctil de la piel?","Una primera toma de contacto y valoración de su estado","El diagnóstico definitivo de cualquier enfermedad","La medición exacta del pH","El fototipo genético"],
+[6,"¿Qué permite la propuesta de tratamiento tras las fases previas del diagnóstico?","Establecer el mejor tratamiento y mostrar al cliente los resultados de forma sencilla","Vender cualquier cosmético","Omitir la entrevista","Cobrar la consulta"],
+[7,"¿Qué factores condicionan la apariencia de la piel del rostro según el tema?","La exposición solar o el ambiente, entre otros","Solo la edad","Únicamente la genética","El color del pelo"],
+[10,"¿Qué consigue eliminar las células muertas de la piel?","Mantenerla más suave, fresca, fina y unificada","Aumentar la seborrea","Provocar manchas","Reducir la hidratación"]
 ]);

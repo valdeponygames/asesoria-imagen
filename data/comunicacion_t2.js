@@ -81,5 +81,22 @@ BANCO.add("comunicacion", 2, [
 [9,"Según el tema, ¿qué forma de reducir los malentendidos de la comunicación oral se propone?","Escuchar con atención","Hablar más rápido","No preguntar","Hablar a la vez"],
 [10,"Según el resumen, la comunicación oral es la forma de comunicación más:","Efímera y accesible","Duradera y formal","Técnica y compleja","Lenta y registrada"],
 [10,"¿Cuántas herramientas de expresión oral recoge el esquema resumen del tema?","Diez","Ocho","Seis","Cinco"],
-[10,"¿Cuál de estas NO es una herramienta de expresión oral del esquema resumen?","El ensayo escrito","El panel","El foro","El simposio"]
+[10,"¿Cuál de estas NO es una herramienta de expresión oral del esquema resumen?","El ensayo escrito","El panel","El foro","El simposio"],
+[4,"La función comunicativa del lenguaje oral consiste principalmente en:","Transmitir opiniones y pensamientos","Llamar la atención del oyente","Describir objetos con precisión técnica","Expresar únicamente sentimientos"],
+[4,"¿Qué convierte los sonidos emitidos con la voz en palabras y oraciones?","Una estructura gramatical","El canal escrito","El lenguaje corporal","El contexto físico"],
+[5,"¿Cuál de estos profesionales es un ejemplo de orador según el tema?","Un locutor de radio","Un traductor de textos escritos","Un corrector ortográfico","Un diseñador gráfico"],
+[5,"Dependiendo del canal y del formato, ¿qué puede añadir el orador cortés para contextualizar el tema?","Una breve introducción y una breve conclusión","Una lista de bibliografía impresa","Un cuestionario por escrito","Un descanso de media hora"],
+[5,"¿Qué necesitan hacer los oradores que no tienen el don de improvisar?","Invertir tiempo en ensayar y esquematizar cada parte del discurso","Leer el discurso sin mirar al público","Hablar más rápido para ganar tiempo","Reducir el contenido a una sola frase"],
+[5,"¿En función de qué debe el orador estructurar los contenidos que va a exponer?","Del tiempo del que dispone","Del número de sillas de la sala","Del color de su vestuario","De la temperatura del espacio"],
+[7,"¿Qué ejemplo de reunión cita el tema además de las reuniones de trabajo?","Las reuniones de una comunidad de vecinos","Las ruedas de prensa deportivas","Los conciertos","Las clases de idiomas online"],
+[7,"¿A quién puede hacerse llegar el informe de una reunión, además de a los participantes?","A otras personas interesadas o afectadas que no pudieron asistir","Solo al moderador","A ningún otro destinatario","Exclusivamente a la prensa"],
+[7,"¿Cómo suelen planificarse las asambleas?","De forma periódica y en relación a temas concretos","De forma improvisada y sin tema","Solo una vez en la vida de la institución","Únicamente por correo electrónico"],
+[7,"¿Qué ocurre con las exposiciones realizadas en un simposio?","Quedan reflejadas por escrito a disposición de los asistentes","Se olvidan porque son orales","Se prohíbe tomar notas","Solo se graban en vídeo para la prensa"],
+[7,"En ciencias sociales, la entrevista se usa como herramienta de:","Investigación cualitativa para conocer las apreciaciones de un experto","Votación popular","Evaluación numérica de exámenes","Publicidad comercial"],
+[8,"¿Qué se espera de un cliente ante el que se expone una propuesta creativa?","Un feedback","Una firma inmediata del contrato","Que no haga comentarios","Que repita la exposición"],
+[9,"La ventaja de la inmediatez de la comunicación oral permite al interlocutor:","Realizar consultas y aclaraciones en el momento","Guardar el mensaje para siempre","Corregir el texto antes de enviarlo","Evitar cualquier respuesta"],
+[9,"¿Por qué en las comunicaciones escritas se exige más prudencia que en las orales?","Porque son menos flexibles y exigen más rigor","Porque son más rápidas","Porque no permiten usar palabras","Porque siempre son anónimas"],
+[9,"¿De qué no depende la accesibilidad de la comunicación oral?","De la tecnología ni de ningún elemento externo","De la voz","De la capacidad de habla","Del lenguaje"],
+[9,"¿Qué posibilitan el lenguaje corporal, las cualidades de la voz y la entonación en la comunicación oral?","La aclaración semántica de cualquier mensaje","Que el mensaje quede registrado por escrito","Que no haga falta receptor","Que el mensaje sea siempre persuasivo"],
+[9,"¿En qué tipo de programas sucede a menudo que los colaboradores no esperan su turno de palabra?","En muchos programas de televisión","En los informativos de radio grabados","En los libros de texto","En las conferencias escritas"]
 ]);

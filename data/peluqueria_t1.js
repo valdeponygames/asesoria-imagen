@@ -86,5 +86,17 @@ BANCO.add("peluqueria", 1, [
 [6,"¿Qué figura acompaña al apartado de estilismos masculinos?","Un chico en una barbería","Una azafata","Una novia","Una señora con mantilla"],
 [8,"¿Cuántos tipos de eventos que demandan asesoramiento del peinado se clasifican en el tema?","Tres","Dos","Cuatro","Cinco"],
 [8,"En producciones de realidad, ¿qué tipo de programas se citan?","Programas televisivos, documentales y series documentales","Películas","Obras de teatro","Series de ficción"],
-[3,"¿Qué figura abre el tema de campos de actuación del asesor de peluquería?","Novia en el tocador","Azafata","Backstage de moda","Peluquero peinando"]
+[3,"¿Qué figura abre el tema de campos de actuación del asesor de peluquería?","Novia en el tocador","Azafata","Backstage de moda","Peluquero peinando"],
+[4,"¿Por qué motivos buscan ayuda los clientes particulares de peluquería, además de por un cambio?","Por placer, por cuestiones de salud o para eventos determinados","Solo por obligación laboral","Únicamente por recomendación médica","Solo para sesiones de fotos"],
+[4,"Si una empresa ya tiene creada su imagen corporativa, ¿para qué puede necesitar al asesor?","Para transmitirla al trabajador","Para eliminarla","Para venderla a otra empresa","Para diseñar su logotipo"],
+[4,"Cuando el asesor no es peluquero, ¿desde qué actitud supervisa la ejecución técnica?","Desde la confianza plena en el equipo de peluquería","Desde la desconfianza","Sin supervisar nada","Haciendo él mismo el corte"],
+[4,"¿Qué puede hacer el asesor de imagen que sí es peluquero?","Ejecutar el proceso completo si así lo quiere","Solo supervisar","Solo vender productos","Nada técnico"],
+[4,"Las alopecias y los tratamientos oncológicos son motivos de demanda del asesoramiento de tipo:","Salud","Profesional","Ocio","Moda"],
+[4,"En el asesoramiento personal, el trabajo se enfoca en la individualización de:","La creación del estilo de cabello adecuado para el cliente","La imagen de toda una plantilla","El vestuario de una película","El catálogo de una marca"],
+[5,"¿Qué hace el asesor con la imagen deseada por la empresa en el asesoramiento capilar profesional?","Adaptar el peinado y comunicarlo a los implicados para que la cumplan","Ignorarla","Cambiarla por su propio gusto","Cobrar sin intervenir"],
+[5,"¿Qué partes del vello facial masculino incluye la asesoría de peluquería masculina?","La barba, el bigote y las patillas","Solo las cejas","Solo las pestañas","El vello del pecho"],
+[5,"¿Qué técnica consiste en dar con tijeras u otro instrumento la forma apropiada al vello facial?","Cortar","Afeitar","Depilar","Rasurar"],
+[9,"¿Con qué información se prepara la propuesta del asesor de peluquería?","Con la información obtenida en la entrevista","Con la opinión de otros clientes","Con las tendencias de la temporada únicamente","Con el presupuesto de la competencia"],
+[9,"¿Qué se muestra al cliente en la fase de presentación?","Las opciones de trabajo vistas en la propuesta","Solo la factura","El historial del peluquero","La lista de colaboradores sin propuestas"],
+[10,"¿Con quién debe trabajar mano a mano el asesor sin formación técnica de peluquería?","Con su equipo de peluqueros","Con un nutricionista","Con un abogado","Con un arquitecto"]
 ]);

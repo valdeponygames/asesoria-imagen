@@ -95,5 +95,8 @@ BANCO.add("empleabilidad", 2, [
 [14,"¿Cuántos factores de riesgo organizativo distingue el tema dentro de las condiciones psicosociales?","Tres","Dos","Cuatro","Cinco"],
 [14,"¿Cuál de estos es un factor de riesgo de la organización o jornada laboral?","Trabajo nocturno o a turnos y jornadas excesivamente largas","La buena comunicación","La autonomía","El desarrollo profesional"],
 [15,"La velocidad exigida, la complejidad o el carácter repetitivo del trabajo son factores de:","La tarea o contenido del trabajo","La jornada laboral","Las relaciones personales","El lugar de trabajo"],
-[15,"Los estilos de mando inadecuados son un factor de riesgo de:","Las relaciones personales y sociales en el trabajo","La tarea","La jornada","Los agentes físicos"]
+[15,"Los estilos de mando inadecuados son un factor de riesgo de:","Las relaciones personales y sociales en el trabajo","La tarea","La jornada","Los agentes físicos"],
+[14,"Según el tema, ¿qué efecto tienen las jornadas largas o con turnos alternos sobre los trabajadores?","No aumentan su productividad y les afectan negativamente","Aumentan siempre su productividad","No tienen ningún efecto","Mejoran su salud"],
+[14,"¿Cuál de estos es un factor de riesgo psicosocial relacionado con la organización de la jornada?","El trabajo nocturno o a turnos","El uso de guantes","La iluminación natural","El trabajo en equipo"],
+[15,"La falta de autonomía y de participación del trabajador es un factor de riesgo relacionado con:","La tarea o contenido del trabajo","La iluminación","El ruido","Los agentes biológicos"]
 ]);

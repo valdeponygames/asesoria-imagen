@@ -95,5 +95,8 @@ BANCO.add("estilismo", 4, [
 [10,"¿A través de qué conocemos la indumentaria bizantina según el tema?","A través del arte","A través de fotografías","A través de prendas conservadas exclusivamente","A través de películas"],
 [10,"Según el esquema resumen, ¿qué caracteriza a la indumentaria de Roma?","Colecciones de temporada e indumentaria diferente en función de la escala social","Nacimiento de los pantalones","Invención de la costura","Confección en lino"],
 [10,"Según el esquema resumen, ¿qué caracteriza al Imperio bizantino?","Tejidos bordados, joyería oriental y vestuario en capas","Túnicas sujetadas con alfileres","Nacimiento de la ropa interior","Prendas con flecos"],
-[10,"Según el esquema resumen, ¿qué caracteriza a la indumentaria griega?","Túnicas sujetadas con alfileres y cinturones y desarrollo de los sombreros","Colecciones de temporada","Nacimiento de las sandalias","Vestuario en capas"]
+[10,"Según el esquema resumen, ¿qué caracteriza a la indumentaria griega?","Túnicas sujetadas con alfileres y cinturones y desarrollo de los sombreros","Colecciones de temporada","Nacimiento de las sandalias","Vestuario en capas"],
+[4,"¿Qué dos inconvenientes tuvieron que resolver los hombres paleolíticos al usar pieles?","Adaptarlas a la forma humana y evitar que se endurecieran y estropearan","Teñirlas y perfumarlas","Venderlas y transportarlas","Bordarlas y almidonarlas"],
+[4,"¿Qué dos formas de prendas se empezaron a distinguir en el Neolítico según su ajuste a la silueta?","Ceñidas o entalladas y drapeadas o no ceñidas","De lana y de seda","De día y de noche","Masculinas y femeninas exclusivamente"],
+[5,"¿Con qué materiales elaboraban los egipcios sus sandalias o chanclas de tiras?","Madera, papiro, piel de cabra y fibra de palma","Hierro y bronce","Seda y terciopelo","Caucho y plástico"]
 ]);

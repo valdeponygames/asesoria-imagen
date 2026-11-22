@@ -82,5 +82,21 @@ BANCO.add("estilismo", 6, [
 [4,"Durante el reinado de Felipe IV, ¿qué cuello se apoyaba sobre la golilla?","La valona","La gorguera","La chorrera","El solitario"],
 [5,"¿A qué estética respondía la indumentaria de los mosqueteros?","A una estética militar","A una estética religiosa","A una estética campesina","A una estética oriental"],
 [7,"¿Qué ventaja ofrecía el miriñaque respecto a la silueta?","Permitía agrandar la forma de la silueta","Estrechaba las caderas","Alargaba las piernas","Reducía el volumen"],
-[9,"¿Por qué se considera que la Revolución Francesa supuso también una revolución en moda?","Porque simplificó el vestuario y eliminó lo lujoso e innecesario","Porque inventó la alta costura","Porque impuso el miriñaque","Porque recuperó las pelucas"]
+[9,"¿Por qué se considera que la Revolución Francesa supuso también una revolución en moda?","Porque simplificó el vestuario y eliminó lo lujoso e innecesario","Porque inventó la alta costura","Porque impuso el miriñaque","Porque recuperó las pelucas"],
+[4,"¿Con qué se decoraba la parte delantera del cuerpo de los trajes femeninos barrocos?","Con encajes y cintas de seda","Con botones de madera","Con plumas de pavo real","Con lentejuelas metálicas"],
+[4,"¿Por qué el «negro ala de mosca» tenía baja intensidad y saturación?","Porque se empleaban telas de peor calidad","Porque se teñía con carbón","Porque se lavaba con lejía","Porque era un color reservado a la realeza"],
+[4,"¿Qué tono era el color dominante al «vestir a la española» a principios del siglo XVII?","El negro","El blanco","El rojo","El amarillo"],
+[5,"¿Cómo llevaban los cortesanos franceses la camisa con el jubón abotonado?","Por fuera, con una capa de raso adornada con cintas de plata","Por dentro y sin capa","Sin jubón","Debajo de una armadura"],
+[5,"¿Cómo eran las pelucas que empezaron a llevar los hombres en el Barroco?","De gran peso y tamaño","Cortas y ligeras","De colores fosforescentes","De papel"],
+[6,"¿Qué elementos abundaban en el estilo textil elegante y refinado del Rococó?","Encajes, frunces, sedas y adornos florales","Pieles sin tratar","Tejidos vaqueros","Estampados geométricos industriales"],
+[6,"¿Cómo era el corpiño del robe volante?","Con pliegues en los hombros","Sin mangas y rígido de metal","De punto elástico","Abierto por la espalda"],
+[8,"¿Sobre qué estructura se elaboraban los peinados Fontange?","Sobre una estructura de crin de caballo o alambre","Sobre una base de cartón","Sobre una corona de oro","Sobre una peluca de lana"],
+[8,"¿Qué elementos se colocaban sobre los tocados Fontange?","Plumas, animales, flores y elementos de todo tipo","Solo una cinta de seda","Únicamente perlas","Nada, eran lisos"],
+[8,"¿Con qué tejidos lujosos se elaboraba el chaleco masculino rococó?","Damasco, raso o terciopelo","Lino y algodón","Lana gruesa","Cuero curtido"],
+[8,"¿Con qué eran los botones del chaleco masculino rococó?","De oro, plata o esmalte","De plástico","De madera tallada","De hueso sin pulir"],
+[8,"¿Qué largo tenía el chaleco rococó respecto a la casaca?","El mismo largo","Mucho más largo","La mitad","Llegaba solo al pecho"],
+[8,"¿Qué complementos destacan en la indumentaria femenina rococó, además de los peinados Fontange?","Los zapatos de tacón y los lazos atados al cuello","Las zapatillas deportivas","Los sombreros de copa","Las gafas de sol"],
+[9,"¿Qué prenda combinaban las mujeres tras la Revolución Francesa con cuerpos sencillos y faldas de vuelo?","Chaquetas entalladas o redingotes","Corsés de ballenas","Miriñaques","Guardainfantes"],
+[9,"Tras la Revolución Francesa, ¿qué prendas eliminaron los hombres de su vestuario?","Los trajes brocados, las casacas bordadas y las pelucas empolvadas","Los pantalones y las botas","Las corbatas de seda negra","Los pañuelos"],
+[9,"¿Qué ocurrió con los tacones altos tras la Revolución Francesa?","Se suprimieron por considerarse lujosos o innecesarios","Se hicieron obligatorios","Se elevaron aún más","Se reservaron a los niños"]
 ]);
