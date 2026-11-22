@@ -72,10 +72,6 @@ BANCO.add("peluqueria", 5, [
 [7,"¿Por qué es importante conocer cómo nace el cabello del cliente?","Para que el nuevo corte y peinado se adapte a la naturaleza de su cabello","Para cobrar más","Por curiosidad","No es importante"],
 [8,"Según el «Sabías que», ¿a quién se le volvió el cabello blanco la noche antes de ser guillotinada?","A la reina María Antonieta de Francia","A Isabel I","A Cleopatra","A Juana la Loca"],
 [8,"¿En qué fecha fue sentenciada y conducida a la guillotina María Antonieta según el tema?","El 16 de octubre de 1793","El 14 de julio de 1789","El 21 de enero de 1793","El 1 de enero de 1800"],
-[8,"En el caso práctico de Luis, ¿por qué quiere cortarse el pelo?","Porque desde hace meses se le parte","Porque se casa","Porque quiere un cambio radical","Porque tiene canas"],
-[8,"En el caso práctico de Luis, ¿cómo lleva siempre el cabello largo?","Recogido","Suelto","Trenzado","Con gomina"],
-[8,"¿Qué conclusión se extrae en el caso de Luis?","Que su cabello se quiebra por la tracción de la goma al recogerlo","Que tiene una enfermedad","Que usa mal champú","Que debe teñirse"],
-[8,"Según un enlace del tema, ¿qué información se ofrece sobre la caída del cabello?","Por qué se cae y cuándo es un signo de alarma","Cómo teñirlo","Cómo cortarlo","Cómo peinarlo"],
 [9,"¿Qué hacen habitualmente los procesos a los que sometemos al cabello?","Alteran su aspecto, su composición y sus propiedades físicas","Nada","Solo mejoran el brillo","Solo cambian el color"],
 [9,"¿Qué agentes incluyen los cambios de forma permanentes, coloraciones y decoloraciones?","Químicos","Mecánicos","Térmicos","Ambientales"],
 [9,"¿Qué agentes incluyen el peinado, el cepillado y el cardado?","Mecánicos","Químicos","Térmicos","Ambientales"],
@@ -91,11 +87,6 @@ BANCO.add("peluqueria", 5, [
 [10,"¿Qué son en realidad los tratamientos para alisar o quitar encrespado?","Cambios de forma permanentes en el cabello","Tratamientos hidratantes suaves","Coloraciones","Cortes"],
 [10,"¿Cómo actúan los tratamientos para alisar o quitar encrespado?","Rompiendo los puentes salinos que dan forma a la fibra capilar","Cerrando la cutícula","Aportando melanina","Hidratando la médula"],
 [10,"Si el cliente sigue un tratamiento médico dermatológico que afecta al cabello, ¿qué debemos hacer?","Consultar con el especialista la compatibilidad con el proceso técnico","Ignorarlo","Suspender su tratamiento","Aplicar el proceso igualmente"],
-[10,"En el caso práctico de Ana, ¿qué quiere hacer con su cabello?","Dejar crecer su cana","Teñirse de rubio","Cortarse el pelo","Ponerse extensiones"],
-[10,"¿Qué no quiere Ana al dejar crecer su cana?","Un corte antiestético entre su cabello virgen y el coloreado","Perder largo","Perder brillo","Rizar su pelo"],
-[10,"¿Por qué la decoloración es la única manera de eliminar los restos de color en el caso de Ana?","Porque quiere mantener el largo","Porque es más barata","Porque es más rápida","Porque lo pide el peluquero"],
-[10,"¿Qué se estudia en el caso de Ana antes de decolorar?","La compatibilidad de los tratamientos y coloraciones previas con la decoloración","Su dieta","Su vestuario","Su piel"],
-[10,"¿Cómo termina el caso práctico de Ana?","Su cabello es compatible con la decoloración y se elimina el corte asemejando su cabello natural","No es compatible y se corta","Se tiñe de negro","Abandona la idea"],
 [11,"¿Con qué sentidos se realiza el primer análisis del cabello?","Con la vista y el tacto","Con el olfato","Con el oído","Con el gusto"],
 [11,"¿Qué se evalúa con la vista y el tacto?","El brillo, la suavidad y la elasticidad del cabello","El tricograma","Los bulbos","La melanina"],
 [11,"Si no conocemos bien los procesos previos del cabello, ¿qué se recomienda antes de un trabajo de color o forma?","Un testeo en una mecha pequeña de la nuca","Aplicar el producto en todo el cabello","Cortar el pelo","No hacer nada"],
@@ -107,7 +98,5 @@ BANCO.add("peluqueria", 5, [
 [11,"¿Cuál de estas técnicas es competencia del personal médico?","El fototricograma","El tricograma por observación de bulbos por el asesor","El tacto","La vista"],
 [11,"¿Qué concepto se recomienda buscar en Google Scholar para conocer más del cabello?","Tricología","Dermatología general","Cosmetología","Visagismo"],
 [12,"Según el resumen, ¿qué debemos respetar por encima de todo?","Las condiciones y propiedades del cabello para preservar su salud","La moda","El presupuesto","El gusto del asesor"],
-[12,"Según el esquema resumen, ¿qué métodos de diagnóstico se incluyen?","Vista y tacto, maniobras de Sabouraud y tracción, y tricograma","Solo biopsia","Solo fotografía","Solo preguntas"],
-[12,"Según la resolución del caso práctico, ¿para qué estamos capacitados como asesores de imagen?","Para ayudar a buscar el equilibrio estético","Para diagnosticar estados del cabello sin formación","Para prescribir tratamientos médicos","Para realizar biopsias"],
-[12,"Según la resolución, ¿de quién es importantísimo rodearse?","De un buen equipo de peluqueros y médicos estéticos especializados","De vendedores","De fotógrafos","De nadie"]
+[12,"Según el esquema resumen, ¿qué métodos de diagnóstico se incluyen?","Vista y tacto, maniobras de Sabouraud y tracción, y tricograma","Solo biopsia","Solo fotografía","Solo preguntas"]
 ]);
