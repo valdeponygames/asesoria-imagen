@@ -402,7 +402,7 @@
     [].forEach.call($("accTabs").children, function (b) { b.classList.toggle("on", b.dataset.t === t); });
     $("accOk").textContent = t === "entrar" ? "Entrar" : "Crear usuario";
     $("accAviso").textContent = t === "crear"
-      ? "Cualquiera que escriba tu nombre de usuario podrá entrar con él, así que elige uno que no sea tu nombre completo."
+      ? "Usa un apodo o algo como laura_g, no tu nombre completo."
       : "";
     $("accErr").textContent = "";
     revisarPwd();
