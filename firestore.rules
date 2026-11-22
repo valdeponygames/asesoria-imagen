@@ -1,0 +1,33 @@
+rules_version = '2';
+// Reglas de Firestore para la web. Copiar en Firebase → Firestore Database → Reglas → Publicar.
+// - Cualquiera puede crear su usuario y leer el suyo (sabiendo su nombre).
+// - Nadie puede listar todos los usuarios ni borrar, salvo el usuario master (Valdepony).
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function esMaster() {
+      return request.auth != null && request.auth.token.email == 'valdepony@asesoria-imagen.app';
+    }
+    function camposOk(d) {
+      return d.keys().hasOnly(['nombre', 'creado', 'ultimo', 'examenes', 'preguntas', 'aciertos', 'sumaNotas', 'temas'])
+        && d.nombre is string && d.nombre.size() <= 24;
+    }
+
+    match /usuarios/{uid} {
+      allow get: if true;
+      allow list: if esMaster();
+      allow create: if camposOk(request.resource.data)
+        && (esMaster() || (uid != 'valdepony' && uid.matches('^[a-z0-9_.-]{3,30}$')));
+      allow update: if camposOk(request.resource.data)
+        && (esMaster() || request.resource.data.nombre == resource.data.nombre);
+      allow delete: if esMaster();
+
+      match /examenes/{eid} {
+        allow read: if true;
+        allow create: if request.resource.data.keys().hasOnly(['fecha', 'nota', 'n', 'ok', 'mal', 'bl', 'temas'])
+          && exists(/databases/$(database)/documents/usuarios/$(uid));
+        allow delete: if esMaster();
+      }
+    }
+  }
+}

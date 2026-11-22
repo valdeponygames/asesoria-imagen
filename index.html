@@ -18,6 +18,15 @@
     <button class="logo" id="logo"><span class="logo-i">✎</span><span class="logo-t">Asesoría de Imagen <span class="logo-sub">Personal y Corporativa</span></span></button>
     <div class="top-r">
       <span class="muted small hide-m" id="totalBanco"></span>
+      <div class="user-w">
+        <button class="user-btn" id="btnUsuario" aria-haspopup="true" aria-expanded="false"><span class="avatar" id="avatar">?</span><span class="user-n" id="userNombre">Entrar</span></button>
+        <div class="menu" id="menuUsuario" hidden>
+          <div class="menu-h" id="menuNombre"></div>
+          <button data-m="stats">📊 Mis estadísticas</button>
+          <button data-m="admin" id="menuAdmin" hidden>🛡 Panel master</button>
+          <button data-m="salir">↩ Cerrar sesión</button>
+        </div>
+      </div>
       <button class="icon-btn" id="btnAjustes" aria-label="Personalizar" title="Personalizar">⚙</button>
     </div>
   </div>
@@ -74,6 +83,32 @@
     </div>
   </section>
 
+  <!-- ================= ESTADÍSTICAS ================= -->
+  <section id="vStats" hidden>
+    <div class="st-top">
+      <div>
+        <button class="lnk small" id="stVolver">← Volver</button>
+        <h1 id="stTitulo">Mis estadísticas</h1>
+        <p class="muted small" id="stSub"></p>
+      </div>
+      <button class="btn" id="stPracticar" hidden>🎯 Practicar lo que tengo que repasar</button>
+    </div>
+    <div id="stCuerpo"></div>
+  </section>
+
+  <!-- ================= PANEL MASTER ================= -->
+  <section id="vAdmin" hidden>
+    <div class="st-top">
+      <div>
+        <button class="lnk small" id="adVolver">← Volver</button>
+        <h1>Panel master</h1>
+        <p class="muted small" id="adSub"></p>
+      </div>
+      <label class="search ad-search"><span>⌕</span><input id="adBuscar" type="search" placeholder="Buscar usuario…" autocomplete="off"></label>
+    </div>
+    <div id="adCuerpo"></div>
+  </section>
+
   <!-- ================= EXAMEN ================= -->
   <section id="vExamen" hidden>
     <div class="exam-bar">
@@ -104,6 +139,7 @@
       <div class="res-info">
         <div class="nota-txt" id="notaTxt"></div>
         <div class="stats" id="stats"></div>
+        <p class="guardado small" id="guardado"></p>
         <div class="res-btns">
           <button class="btn" id="btnRepetir">Otro examen igual</button>
           <button class="btn ghost" id="btnVolver">Cambiar temas</button>
@@ -146,7 +182,25 @@
   </div>
 </div>
 
+<!-- ================= ACCESO ================= -->
+<div class="modal" id="acceso" hidden>
+  <div class="modal-in acc" role="dialog" aria-modal="true" aria-labelledby="accTit">
+    <div class="modal-h"><h2 id="accTit">Tu usuario</h2><button class="icon-btn" id="accCerrar" aria-label="Cerrar">✕</button></div>
+    <p class="muted small">Entra con tu nombre de usuario para guardar tus notas y ver tus estadísticas en cualquier dispositivo. No hace falta contraseña.</p>
+    <div class="tabs acc-tabs" id="accTabs"><button data-t="entrar" class="on">Entrar</button><button data-t="crear">Crear usuario</button></div>
+    <form id="accForm" autocomplete="off">
+      <label class="fld"><span>Nombre de usuario</span><input id="accNombre" maxlength="24" autocapitalize="off" spellcheck="false" placeholder="p. ej. laura_g"></label>
+      <label class="fld" id="accPwdW" hidden><span>Contraseña</span><input id="accPwd" type="password" autocomplete="current-password"></label>
+      <p class="acc-err small" id="accErr" role="alert"></p>
+      <p class="muted small" id="accAviso"></p>
+      <button class="btn big" id="accOk" type="submit">Entrar</button>
+    </form>
+    <div class="modal-f"><button class="lnk" id="accInvitado">Seguir sin usuario</button><span class="muted small" id="accModo"></span></div>
+  </div>
+</div>
+
 <script src="config.js"></script>
+<script src="usuarios.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

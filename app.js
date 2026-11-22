@@ -45,7 +45,7 @@
   }
 
   function vista(v) {
-    ["vSeleccion", "vExamen", "vResultado"].forEach(function (id) { $(id).hidden = id !== v; });
+    ["vSeleccion", "vExamen", "vResultado", "vStats", "vAdmin"].forEach(function (id) { $(id).hidden = id !== v; });
     document.body.setAttribute("data-vista", v);
     window.scrollTo(0, 0);
   }
@@ -234,6 +234,12 @@
       t.total++; if (p.estado === "ok") t.ok++; else t.pags[p.pag] = 1;
     });
     var nota = Math.round((ok / examen.length) * 100) / 10;
+    var res = { nota: nota, n: examen.length, ok: ok, mal: mal, bl: bl, porTema: {} };
+    examen.forEach(function (p) {
+      var k = p.asig + "_" + p.tema, t = res.porTema[k] = res.porTema[k] || { ok: 0, mal: 0, bl: 0, pags: {} };
+      if (p.estado === "ok") t.ok++; else { t[p.estado === "mal" ? "mal" : "bl"]++; t.pags[p.pag] = (t.pags[p.pag] || 0) + 1; }
+    });
+    pendiente = res; guardarResultado();
     $("nota").textContent = nota.toLocaleString("es-ES");
     var C = 2 * Math.PI * 52;
     $("ringFg").style.strokeDasharray = C; $("ringFg").style.strokeDashoffset = C * (1 - nota / 10);
@@ -278,7 +284,268 @@
   $("filtro").addEventListener("click", function (e) { var b = e.target.closest("button"); if (b) filtrar(b.dataset.f); });
   $("btnRepetir").onclick = generar;
   $("btnVolver").onclick = function () { pintarAsignaturas(); vista("vSeleccion"); };
-  $("logo").onclick = function () { if ($("vExamen").hidden || confirm("¿Salir del examen?")) { pintarAsignaturas(); vista("vSeleccion"); } };
+  $("logo").onclick = function () { if ($("vExamen").hidden || confirm("¿Salir del examen?")) irInicio(); };
+  function irInicio() { pintarAsignaturas(); vista("vSeleccion"); }
+
+  // ================= USUARIOS =================
+  var pendiente = null;   // resumen del último examen aún no guardado
+  var tabAcceso = "entrar";
+
+  function fecha(ts) { return ts ? new Date(ts).toLocaleDateString("es-ES", { day: "numeric", month: "short", year: "numeric" }) : "—"; }
+  function hace(ts) {
+    if (!ts) return "nunca";
+    var d = Math.floor((Date.now() - ts) / 86400000);
+    return d <= 0 ? "hoy" : d === 1 ? "ayer" : d < 30 ? "hace " + d + " días" : fecha(ts);
+  }
+  function fmt(n, dec) { return (Math.round(n * Math.pow(10, dec || 0)) / Math.pow(10, dec || 0)).toLocaleString("es-ES"); }
+  function inicial(n) { return esc((n || "?").trim().charAt(0).toUpperCase()); }
+
+  function pintarUsuario() {
+    var u = CUENTAS.actual();
+    $("avatar").innerHTML = u ? inicial(u.nombre) : "👤";
+    $("avatar").classList.toggle("on", !!u);
+    $("userNombre").textContent = u ? u.nombre : "Entrar";
+    $("menuNombre").innerHTML = u ? '<strong>' + esc(u.nombre) + '</strong><span class="muted small">' +
+      (u.admin ? "Usuario master" : CUENTAS.modo === "nube" ? "Sincronizado en la nube" : "Guardado en este navegador") + '</span>' : "";
+    $("menuAdmin").hidden = !(u && u.admin);
+  }
+  function cerrarMenu() { $("menuUsuario").hidden = true; $("btnUsuario").setAttribute("aria-expanded", "false"); }
+
+  $("btnUsuario").onclick = function (e) {
+    e.stopPropagation();
+    if (!CUENTAS.actual()) { abrirAcceso("entrar"); return; }
+    var m = $("menuUsuario"); m.hidden = !m.hidden; this.setAttribute("aria-expanded", String(!m.hidden));
+  };
+  document.addEventListener("click", function (e) { if (!e.target.closest(".user-w")) cerrarMenu(); });
+  $("menuUsuario").addEventListener("click", function (e) {
+    var b = e.target.closest("button"); if (!b) return;
+    cerrarMenu();
+    if (!$("vExamen").hidden && !confirm("¿Salir del examen?")) return;
+    if (b.dataset.m === "stats") verStats();
+    else if (b.dataset.m === "admin") verAdmin();
+    else if (b.dataset.m === "salir") CUENTAS.salir().then(function () { pintarUsuario(); irInicio(); abrirAcceso("entrar"); });
+  });
+
+  // ---------- Acceso / registro ----------
+  function abrirAcceso(tab) {
+    $("accNombre").value = ""; $("accPwd").value = "";
+    $("accModo").textContent = CUENTAS.modo === "nube" ? "☁ Se guarda en la nube" : "Solo en este navegador";
+    tabAccesoSet(tab || "entrar");
+    $("acceso").hidden = false;
+    setTimeout(function () { $("accNombre").focus(); }, 30);
+  }
+  function tabAccesoSet(t) {
+    tabAcceso = t;
+    [].forEach.call($("accTabs").children, function (b) { b.classList.toggle("on", b.dataset.t === t); });
+    $("accOk").textContent = t === "entrar" ? "Entrar" : "Crear usuario";
+    $("accAviso").textContent = t === "crear"
+      ? "Cualquiera que escriba tu nombre de usuario podrá entrar con él, así que elige uno que no sea tu nombre completo."
+      : "";
+    $("accErr").textContent = "";
+    revisarPwd();
+  }
+  function revisarPwd() {
+    var adm = tabAcceso === "entrar" && CUENTAS.esAdminNombre($("accNombre").value);
+    $("accPwdW").hidden = !adm;
+  }
+  $("accTabs").addEventListener("click", function (e) { var b = e.target.closest("button"); if (b) tabAccesoSet(b.dataset.t); });
+  $("accNombre").addEventListener("input", function () { $("accErr").textContent = ""; revisarPwd(); });
+  $("accCerrar").onclick = function () { $("acceso").hidden = true; };
+  $("acceso").addEventListener("click", function (e) { if (e.target === $("acceso")) $("acceso").hidden = true; });
+  $("accInvitado").onclick = function () { guardar("invitado", true); $("acceso").hidden = true; };
+  $("accForm").onsubmit = function (e) {
+    e.preventDefault();
+    var btn = $("accOk"), nombre = $("accNombre").value;
+    btn.disabled = true; $("accErr").textContent = "";
+    var p = tabAcceso === "entrar" ? CUENTAS.entrar(nombre, $("accPwd").value) : CUENTAS.crear(nombre);
+    p.then(function () {
+      $("acceso").hidden = true; guardar("invitado", false); pintarUsuario();
+      if (pendiente && !pendiente.guardado) guardarResultado();
+    }).catch(function (err) {
+      $("accErr").textContent = err.message || String(err);
+    }).then(function () { btn.disabled = false; });
+  };
+
+  // ---------- Guardar el resultado del examen ----------
+  function guardarResultado() {
+    var g = $("guardado"), u = CUENTAS.actual(), r = pendiente;
+    if (!r) return;
+    if (!u) {
+      g.className = "guardado small";
+      g.innerHTML = '<button class="lnk" id="gEntrar">Entra con tu usuario</button> para guardar este resultado en tus estadísticas.';
+      $("gEntrar").onclick = function () { abrirAcceso("entrar"); };
+      return;
+    }
+    g.className = "guardado small"; g.textContent = "Guardando…";
+    CUENTAS.registrarExamen(r).then(function () {
+      r.guardado = true;
+      g.className = "guardado small ok";
+      g.innerHTML = '✓ Guardado en las estadísticas de ' + esc(u.nombre) + ' · <button class="lnk" id="gVer">Ver estadísticas</button>';
+      $("gVer").onclick = function () { verStats(); };
+    }).catch(function (e) {
+      console.error(e);
+      g.className = "guardado small mal";
+      g.textContent = "No se ha podido guardar el resultado (" + (e.code || e.message) + ").";
+    });
+  }
+
+  // ---------- Estadísticas ----------
+  function infoTema(k) { var p = k.split("_"), a = asigPorId(p[0]); return a && a.temas[+p[1] - 1] ? { a: a, n: +p[1], t: a.temas[+p[1] - 1] } : null; }
+  function nivel(pc) {
+    return pc >= 80 ? { c: "dom", t: "Dominado", i: "★" } : pc >= 50 ? { c: "apr", t: "Aprobado", i: "✓" } : { c: "rep", t: "Repasar", i: "!" };
+  }
+  function badge(nv) { return '<span class="nv nv-' + nv.c + '">' + nv.i + " " + nv.t + '</span>'; }
+  function totalT(d) { return d.ok + d.mal + d.bl; }
+  var repasarActual = [];
+
+  function verStats(id) {
+    var ajeno = !!id && id !== (CUENTAS.actual() || {}).id;
+    vista("vStats");
+    $("stTitulo").textContent = "Estadísticas"; $("stSub").textContent = "";
+    $("stPracticar").hidden = true;
+    $("stCuerpo").innerHTML = '<p class="muted cargando">Cargando…</p>';
+    $("stVolver").onclick = ajeno ? verAdmin : irInicio;
+    CUENTAS.datos(id).then(function (d) { pintarStats(d, ajeno); })
+      .catch(function (e) { $("stCuerpo").innerHTML = '<p class="acc-err">No se han podido cargar las estadísticas (' + esc(e.code || e.message) + ').</p>'; });
+  }
+
+  function graficoNotas(ex) {
+    var W = 640, H = 190, L = 28, R = 8, T = 10, B = 22, iw = W - L - R, ih = H - T - B, n = ex.length;
+    var slot = iw / Math.max(n, 1), bw = Math.max(4, Math.min(26, slot - 6));
+    var y = function (v) { return T + ih - ih * v / 10; };
+    var g = [0, 5, 10].map(function (v) {
+      return '<line x1="' + L + '" x2="' + (W - R) + '" y1="' + y(v) + '" y2="' + y(v) + '" class="' + (v === 5 ? "g5" : "g") + '"/>' +
+        '<text x="' + (L - 6) + '" y="' + (y(v) + 4) + '" class="ax" text-anchor="end">' + v + '</text>';
+    }).join("");
+    var bars = ex.map(function (e, i) {
+      var x = L + slot * i + (slot - bw) / 2, h = Math.max(2, ih * e.nota / 10), r = Math.min(4, bw / 2);
+      var top = y(e.nota), base = T + ih;
+      var path = "M" + x + "," + base + "V" + (top + r) + "Q" + x + "," + top + " " + (x + r) + "," + top + "H" + (x + bw - r) +
+        "Q" + (x + bw) + "," + top + " " + (x + bw) + "," + (top + r) + "V" + base + "Z";
+      if (h <= r) path = "M" + x + "," + base + "V" + top + "H" + (x + bw) + "V" + base + "Z";
+      return '<g class="bar"><rect x="' + (L + slot * i) + '" y="' + T + '" width="' + slot + '" height="' + ih + '" class="hit"/>' +
+        '<path d="' + path + '" class="' + (e.nota >= 5 ? "b-a" : "b-s") + '"/>' +
+        '<title>' + fecha(e.fecha) + ": " + fmt(e.nota, 1) + " (" + e.ok + "/" + e.n + ")</title></g>";
+    }).join("");
+    return '<svg viewBox="0 0 ' + W + ' ' + H + '" class="chart" role="img" aria-label="Notas de los últimos exámenes">' + g + bars +
+      '<text x="' + (W - R) + '" y="' + (y(5) - 5) + '" class="ax" text-anchor="end">aprobado</text>' +
+      '<text x="' + L + '" y="' + (H - 4) + '" class="ax">' + (n > 1 ? "más antiguo" : "") + '</text>' +
+      '<text x="' + (W - R) + '" y="' + (H - 4) + '" class="ax" text-anchor="end">más reciente</text></svg>';
+  }
+
+  function pintarStats(d, ajeno) {
+    var u = d.usuario;
+    if (!u) { $("stCuerpo").innerHTML = '<p class="acc-err">Este usuario ya no existe.</p>'; return; }
+    $("stTitulo").textContent = ajeno ? "Estadísticas de " + u.nombre : "Mis estadísticas";
+    $("stSub").textContent = (ajeno ? "@" + d.id + " · " : "") + "Usuario desde el " + fecha(u.creado) + " · último examen " + hace(u.examenes ? u.ultimo : 0);
+    if (!u.examenes) {
+      $("stCuerpo").innerHTML = '<div class="card vacio-st"><div class="big-ico">📊</div><h3>' + (ajeno ? "Aún no ha hecho ningún examen" : "Aún no has hecho ningún examen") + '</h3>' +
+        (ajeno ? "" : '<p class="muted">Haz un examen y aquí verás tu nota media, tu evolución y los temas que tienes que repasar.</p><button class="btn" id="stEmpezar">Elegir temas</button>') + '</div>';
+      if (!ajeno) $("stEmpezar").onclick = irInicio;
+      return;
+    }
+
+    var media = u.sumaNotas / u.examenes, pcAc = u.preguntas ? 100 * u.aciertos / u.preguntas : 0;
+    var temas = Object.keys(u.temas || {}).filter(function (k) { return infoTema(k) && totalT(u.temas[k]) > 0; });
+    var cuenta = { dom: 0, apr: 0, rep: 0 };
+    temas.forEach(function (k) { var t = u.temas[k]; cuenta[nivel(100 * t.ok / totalT(t)).c]++; });
+    var totalTemas = 0; ASIGNATURAS.forEach(function (a) { totalTemas += claves(a).length; });
+
+    var kpis = '<div class="kpis">' +
+      '<div class="kpi"><span class="kpi-l">Nota media</span><span class="kpi-v ' + (media >= 5 ? "t-ok" : "t-mal") + '">' + fmt(media, 1) + '</span></div>' +
+      '<div class="kpi"><span class="kpi-l">Exámenes</span><span class="kpi-v">' + fmt(u.examenes) + '</span></div>' +
+      '<div class="kpi"><span class="kpi-l">Aciertos</span><span class="kpi-v">' + fmt(pcAc) + ' %</span></div>' +
+      '<div class="kpi"><span class="kpi-l">Preguntas</span><span class="kpi-v">' + fmt(u.preguntas) + '</span></div></div>';
+
+    var niveles = '<div class="niveles">' +
+      '<span class="nv nv-dom">★ ' + cuenta.dom + ' dominados</span><span class="nv nv-apr">✓ ' + cuenta.apr + ' aprobados</span>' +
+      '<span class="nv nv-rep">! ' + cuenta.rep + ' por repasar</span><span class="nv nv-sin">○ ' + (totalTemas - temas.length) + ' sin practicar</span></div>';
+
+    var ex = d.examenes || [];
+    var evol = '<div class="card"><h3>Evolución <span class="muted small">· últimos ' + ex.length + ' exámenes</span></h3>' + graficoNotas(ex) + '</div>';
+
+    // Qué repasar: temas por debajo del 50 %, del peor al mejor, con las páginas más falladas
+    var orden = temas.slice().sort(function (a, b) { var A = u.temas[a], B = u.temas[b]; return A.ok / totalT(A) - B.ok / totalT(B); });
+    var rep = orden.filter(function (k) { return 100 * u.temas[k].ok / totalT(u.temas[k]) < 50; });
+    repasarActual = rep;
+    var lista = rep.length ? rep : orden.filter(function (k) { return u.temas[k].ok < totalT(u.temas[k]); }).slice(0, 3);
+    var repaso = '<div class="card"><h3>' + (rep.length ? "Necesita" + (ajeno ? "" : "s") + " repasar" : "Para mejorar") + '</h3>' +
+      (lista.length ? '<ul class="rep">' + lista.map(function (k) {
+        var t = u.temas[k], it = infoTema(k), pc = 100 * t.ok / totalT(t);
+        var pags = Object.keys(t.pags || {}).sort(function (x, y) { return t.pags[y] - t.pags[x]; }).slice(0, 6);
+        return '<li><div class="rep-h"><div><strong>' + esc(it.a.nombre) + '</strong><div class="muted small">Tema ' + it.n + ': ' + esc(it.t) + '</div></div>' +
+          '<span class="rep-pc t-mal">' + fmt(pc) + ' %</span></div>' +
+          (pags.length ? '<div class="pags">' + pags.map(function (p) {
+            return '<span class="pg" title="' + t.pags[p] + ' fallo(s)">pág. ' + p.slice(1) + (t.pags[p] > 1 ? " ×" + t.pags[p] : "") + '</span>';
+          }).join("") + '</div>' : "") + '</li>';
+      }).join("") + '</ul>' : '<p class="muted">¡Todo perfecto! No hay fallos que repasar. 🎉</p>') + '</div>';
+
+    // Por asignatura
+    var porAsig = ASIGNATURAS.map(function (a) {
+      var ks = claves(a), ok = 0, tot = 0;
+      var filas = ks.map(function (k) {
+        var t = u.temas[k], i = +k.split("_")[1];
+        if (!t || !totalT(t)) return '<div class="tf sin"><span class="tf-n">T' + i + '</span><span class="tf-t">' + esc(a.temas[i - 1]) + '</span><span class="tf-bar"></span><span class="tf-v muted">—</span><span class="nv nv-sin">○ Sin practicar</span></div>';
+        var pc = 100 * t.ok / totalT(t), nv = nivel(pc); ok += t.ok; tot += totalT(t);
+        return '<div class="tf"><span class="tf-n">T' + i + '</span><span class="tf-t">' + esc(a.temas[i - 1]) + '</span>' +
+          '<span class="tf-bar"><span class="b-' + nv.c + '" style="width:' + pc + '%"></span></span>' +
+          '<span class="tf-v">' + t.ok + '/' + totalT(t) + '</span>' + badge(nv) + '</div>';
+      }).join("");
+      var pcA = tot ? 100 * ok / tot : null;
+      return '<details class="card asig-st"' + (tot ? " open" : "") + '><summary><span class="asig-ico">' + (ICONOS[a.id] || "📘") + '</span>' +
+        '<span class="as-t"><strong>' + esc(a.nombre) + '</strong><span class="muted small">' + (tot ? fmt(pcA) + " % de aciertos · " + tot + " preguntas" : "Sin practicar") + '</span></span>' +
+        (tot ? badge(nivel(pcA)) : "") + '</summary><div class="tfs">' + filas + '</div></details>';
+    }).join("");
+
+    $("stCuerpo").innerHTML = kpis + niveles + '<div class="res-grid">' + evol + repaso + '</div><h2 class="st-h2">Por asignatura y tema</h2><div class="asigs">' + porAsig + '</div>';
+    $("stPracticar").hidden = ajeno || !rep.length;
+  }
+  $("stPracticar").onclick = function () {
+    seleccion = {}; repasarActual.forEach(function (k) { setTema(k, true); }); cambio(); vista("vSeleccion");
+  };
+
+  // ---------- Panel master ----------
+  var listaUsuarios = [];
+  function verAdmin() {
+    vista("vAdmin");
+    $("adCuerpo").innerHTML = '<p class="muted cargando">Cargando usuarios…</p>';
+    CUENTAS.usuarios().then(function (l) {
+      listaUsuarios = l.sort(function (a, b) { return (b.ultimo || 0) - (a.ultimo || 0); });
+      pintarAdmin();
+    }).catch(function (e) { $("adCuerpo").innerHTML = '<p class="acc-err">No se han podido cargar los usuarios (' + esc(e.code || e.message) + ').</p>'; });
+  }
+  function pintarAdmin() {
+    var q = norm($("adBuscar").value.trim()), l = listaUsuarios;
+    var ex = 0, sn = 0, act = 0;
+    l.forEach(function (u) { ex += u.examenes || 0; sn += u.sumaNotas || 0; if (u.ultimo && Date.now() - u.ultimo < 7 * 86400000) act++; });
+    $("adSub").textContent = l.length + (l.length === 1 ? " usuario · " : " usuarios · ") + ex + (ex === 1 ? " examen · " : " exámenes · ") + act + (act === 1 ? " activo" : " activos") + " esta semana" + (ex ? " · nota media " + fmt(sn / ex, 1) : "");
+    var vis = l.filter(function (u) { return !q || norm(u.nombre + " " + u.id).indexOf(q) >= 0; });
+    $("adCuerpo").innerHTML = vis.length ? '<div class="ulist">' + vis.map(function (u) {
+      var m = u.examenes ? u.sumaNotas / u.examenes : null, master = u.id === CUENTAS.ADMIN_ID;
+      return '<div class="urow" data-id="' + esc(u.id) + '"><span class="avatar on">' + inicial(u.nombre) + '</span>' +
+        '<div class="u-info"><strong>' + esc(u.nombre) + (master ? ' <span class="nv nv-dom">master</span>' : "") + '</strong>' +
+        '<span class="muted small">' + (u.examenes || 0) + ' exámenes' + (m !== null ? ' · media <b class="' + (m >= 5 ? "t-ok" : "t-mal") + '">' + fmt(m, 1) + '</b>' : "") +
+        ' · ' + (u.examenes ? "último " + hace(u.ultimo) : "alta " + fecha(u.creado)) + '</span></div>' +
+        '<div class="u-acc"><button class="chip-btn" data-a="ver">📊 Ver</button>' +
+        '<button class="chip-btn" data-a="reset" title="Borra sus estadísticas pero mantiene el usuario">↺ Reiniciar</button>' +
+        (master ? "" : '<button class="chip-btn peligro" data-a="borrar">🗑 Eliminar</button>') + '</div></div>';
+    }).join("") + '</div>' : '<p class="muted vacio">' + (l.length ? "Ningún usuario coincide con la búsqueda." : "Todavía no hay usuarios.") + '</p>';
+  }
+  $("adBuscar").addEventListener("input", pintarAdmin);
+  $("adVolver").onclick = irInicio;
+  $("stVolver").onclick = irInicio;
+  $("adCuerpo").addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-a]"); if (!b) return;
+    var id = b.closest(".urow").dataset.id, u = listaUsuarios.filter(function (x) { return x.id === id; })[0];
+    if (b.dataset.a === "ver") verStats(id);
+    else if (b.dataset.a === "reset") {
+      if (confirm("¿Reiniciar las estadísticas de «" + u.nombre + "»? Se borrarán sus exámenes y no se puede deshacer.")) CUENTAS.reiniciar(id).then(verAdmin, alertaError);
+    } else if (b.dataset.a === "borrar") {
+      if (confirm("¿Eliminar el usuario «" + u.nombre + "» y todas sus estadísticas? No se puede deshacer.")) CUENTAS.borrar(id).then(verAdmin, alertaError);
+    }
+  });
+  function alertaError(e) { alert("No se ha podido completar: " + (e.code || e.message)); }
+
 
   // ================= PERSONALIZACIÓN =================
   var COLORES = [
@@ -322,5 +589,12 @@
   aplicarPrefs();
   seleccion = leer("sel", {});
   document.body.setAttribute("data-vista", "vSeleccion");
-  cargarDatos(pintarAsignaturas);
+  pintarUsuario();
+  cargarDatos(function () {
+    pintarAsignaturas();
+    CUENTAS.iniciar().then(function (u) {
+      pintarUsuario();
+      if (!u && !leer("invitado", false)) abrirAcceso("entrar");
+    }).catch(function (e) { console.error(e); pintarUsuario(); });
+  });
 })();

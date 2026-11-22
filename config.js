@@ -1,7 +1,19 @@
 // Configuración del simulador.
 // - PREGUNTAS_POR_EXAMEN: número de preguntas por defecto (cada usuario puede cambiarlo en ⚙ Personalizar).
+// - FIREBASE: datos del proyecto de Firebase para guardar usuarios y estadísticas en la nube
+//   (ver FIREBASE.md). Si se deja en null, los usuarios se guardan solo en este navegador.
+// - ADMIN_EMAIL: correo de la cuenta "Valdepony" creada en Firebase Authentication.
 var CONFIG = {
-  PREGUNTAS_POR_EXAMEN: 20
+  PREGUNTAS_POR_EXAMEN: 20,
+  FIREBASE: {
+    apiKey: "AIzaSyA8L2HFIQpypWxbLHQE74hhCZ9Lxx4dab0",
+    authDomain: "asesoria-imagen-c1110.firebaseapp.com",
+    projectId: "asesoria-imagen-c1110",
+    storageBucket: "asesoria-imagen-c1110.firebasestorage.app",
+    messagingSenderId: "711244363722",
+    appId: "1:711244363722:web:4593b98dd83898f4c08133"
+  },
+  ADMIN_EMAIL: "valdepony@asesoria-imagen.app"
 };
 
 var ASIGNATURAS = [
