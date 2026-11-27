@@ -64,7 +64,6 @@ BANCO.add("estilismo", 4, [
 [7,"¿Qué era el pilos?","Un sombrero masculino de fieltro o lana","Un sombrero femenino con borla","Un sombrero de viaje","Una tiara","ESV4-063"],
 [7,"¿Qué prenda griega era una especie de capa hasta la rodilla que se colocaba sobre el chitón?","Aepepfos","Clámide","Pharos","Himation","ESV4-064"],
 [7,"¿Por qué las mujeres griegas usaban vendas de tela para aplanar el pecho?","Porque el busto voluminoso no respondía al canon de belleza","Por comodidad","Por motivos religiosos","Para practicar deporte","ESV4-065"],
-[7,"¿Qué escultura se cita como representativa de la Antigua Grecia?","La Venus de Milo","El Discóbolo","La Victoria de Samotracia","El Doríforo","ESV4-066"],
 [7,"¿En qué civilización se introduce por primera vez el concepto de ropa de temporada?","En la Antigua Roma","En Grecia","En Egipto","En el Imperio bizantino","ESV4-067"],
 [7,"¿Qué era el strophium romano?","Una especie de corsé no rígido de tela sin almidonar","Un manto rectangular","Una capa de lluvia","Una túnica de seda","ESV4-068"],
 [8,"¿De qué materiales podía ser la túnica femenina romana?","Lana, lino o seda según la época del año y el estatus","Solo de cuero","Solo de algodón","Solo de lino","ESV4-069"],
@@ -98,5 +97,6 @@ BANCO.add("estilismo", 4, [
 [10,"Según el esquema resumen, ¿qué caracteriza a la indumentaria griega?","Túnicas sujetadas con alfileres y cinturones y desarrollo de los sombreros","Colecciones de temporada","Nacimiento de las sandalias","Vestuario en capas","ESV4-097"],
 [4,"¿Qué dos inconvenientes tuvieron que resolver los hombres paleolíticos al usar pieles?","Adaptarlas a la forma humana y evitar que se endurecieran y estropearan","Teñirlas y perfumarlas","Venderlas y transportarlas","Bordarlas y almidonarlas","ESV4-098"],
 [4,"¿Qué dos formas de prendas se empezaron a distinguir en el Neolítico según su ajuste a la silueta?","Ceñidas o entalladas y drapeadas o no ceñidas","De lana y de seda","De día y de noche","Masculinas y femeninas exclusivamente","ESV4-099"],
-[5,"¿Con qué materiales elaboraban los egipcios sus sandalias o chanclas de tiras?","Madera, papiro, piel de cabra y fibra de palma","Hierro y bronce","Seda y terciopelo","Caucho y plástico","ESV4-100"]
+[5,"¿Con qué materiales elaboraban los egipcios sus sandalias o chanclas de tiras?","Madera, papiro, piel de cabra y fibra de palma","Hierro y bronce","Seda y terciopelo","Caucho y plástico","ESV4-100"],
+[4,"¿Qué inventaron los hombres del Paleolítico para adaptar las pieles a la silueta humana?","Un sistema de costura con rudimentarias agujas","El telar","El almidonado","Los botones","ESV4-101"]
 ]);

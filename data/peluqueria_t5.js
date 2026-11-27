@@ -49,7 +49,6 @@ BANCO.add("peluqueria", 5, [
 [6,"¿Qué se encarga de colorear el cabello dándole oscuridad y reflejo?","La melanina","La queratina","El sebo","La cutícula","PEL5-048"],
 [6,"¿Qué tipo de melaninas proporcionan los colores oscuros, entre el negro y el castaño?","Las eumelaninas","Las feomelaninas","Los carotenos","La hemoglobina","PEL5-049"],
 [6,"¿Qué tipo de melaninas dan lugar a los colores claros, entre el amarillo y el pelirrojo?","Las feomelaninas","Las eumelaninas","Los carotenos","La queratina","PEL5-050"],
-[6,"¿Qué figura ilustra el apartado del color en los diferentes tipos de cabello?","Mujer con cabello cano","Clienta con melena rubia cobriza","Peinando a la clienta","Cliente con barba canosa","PEL5-051"],
 [7,"¿Qué es la proporción y cantidad de melanina en cada persona?","Una característica individual","Igual para todos","Depende solo del champú","Depende del clima","PEL5-052"],
 [7,"¿Cómo se numera la escala de oscuridad del color capilar?","Del 1 al 10, siendo 1 el negro y 10 el rubio platino","Del 1 al 5","Del 0 al 100","Del 10 al 1 siendo 10 el negro","PEL5-053"],
 [7,"En la escala de color capilar, ¿qué número corresponde al color más oscuro?","El 1","El 10","El 5","El 0","PEL5-054"],
@@ -98,5 +97,6 @@ BANCO.add("peluqueria", 5, [
 [11,"¿Cuál de estas técnicas es competencia del personal médico?","El fototricograma","El tricograma por observación de bulbos por el asesor","El tacto","La vista","PEL5-097"],
 [11,"¿Qué concepto se recomienda buscar en Google Scholar para conocer más del cabello?","Tricología","Dermatología general","Cosmetología","Visagismo","PEL5-098"],
 [12,"Según el resumen, ¿qué debemos respetar por encima de todo?","Las condiciones y propiedades del cabello para preservar su salud","La moda","El presupuesto","El gusto del asesor","PEL5-099"],
-[12,"Según el esquema resumen, ¿qué métodos de diagnóstico se incluyen?","Vista y tacto, maniobras de Sabouraud y tracción, y tricograma","Solo biopsia","Solo fotografía","Solo preguntas","PEL5-100"]
+[12,"Según el esquema resumen, ¿qué métodos de diagnóstico se incluyen?","Vista y tacto, maniobras de Sabouraud y tracción, y tricograma","Solo biopsia","Solo fotografía","Solo preguntas","PEL5-100"],
+[10,"Si el cliente sigue un tratamiento dermatológico que afecta al cabello, ¿qué debemos hacer?","Consultar con el especialista la compatibilidad con el proceso técnico","Ignorarlo","Aplicar el proceso igualmente","Pedirle que deje el tratamiento","PEL5-101"]
 ]);

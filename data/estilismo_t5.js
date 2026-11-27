@@ -15,7 +15,6 @@ BANCO.add("estilismo", 5, [
 [4,"¿Qué tipo de vestuario se desarrolló en la Edad Media?","El vestuario eclesiástico","El vestuario deportivo","La alta costura","El prêt-à-porter","ESV5-014"],
 [4,"¿De qué se componía básicamente el vestuario medieval?","De dos túnicas sujetas con un cinturón","De un pantalón y una camisa","De una toga y una estola","De un chitón y un himation","ESV5-015"],
 [4,"¿Qué solía emplear la clase trabajadora medieval para trabajar?","Pantalones bombachos","Togas","Faldas largas","Jubones bordados","ESV5-016"],
-[4,"¿Qué obra de arte se cita como representativa de la indumentaria medieval?","«El matrimonio Arnolfini»","«Las Meninas»","«La Gioconda»","«El nacimiento de Venus»","ESV5-017"],
 [5,"En la Edad Media, en comparación con los hombres, las mujeres solían llevar prendas:","Más discretas","Más llamativas","Más cortas","Más coloridas","ESV5-018"],
 [5,"Al principio de la Edad Media, ¿cómo eran las túnicas femeninas?","Muy pesadas, con faldas acampanadas que arrastraban por el suelo","Cortas y ligeras","Transparentes","Sin mangas","ESV5-019"],
 [5,"¿Qué buscaban las faldas de talle alto sujetas justo debajo del pecho?","Resaltar el pecho","Ocultar la cintura","Alargar las piernas","Abrigar más","ESV5-020"],
@@ -98,5 +97,6 @@ BANCO.add("estilismo", 5, [
 [4,"Hacia el final de la Edad Media, frente a la influencia bizantina, surgieron:","Estilos propios nacionales","La moda prêt-à-porter","Los vaqueros","Las pasarelas internacionales","ESV5-097"],
 [5,"A partir del siglo XII, ¿qué túnicas empezaron a lucir las clases altas medievales?","Túnicas ajustadas a la cadera","Túnicas cortas por encima de la rodilla","Túnicas sin mangas","Túnicas de pieles sin coser","ESV5-098"],
 [5,"En las túnicas del siglo XII, ¿hasta dónde se ajustaban las mangas antes de alargarse?","Hasta la altura del codo","Hasta el hombro","Hasta la muñeca","No tenían mangas","ESV5-099"],
-[9,"¿Qué adornos para el cabello con joyería se llevaban en el Renacimiento?","Diademas de oro con pedrería","Gorras de lana","Pinzas de plástico","Cintas de algodón sin adornos","ESV5-100"]
+[9,"¿Qué adornos para el cabello con joyería se llevaban en el Renacimiento?","Diademas de oro con pedrería","Gorras de lana","Pinzas de plástico","Cintas de algodón sin adornos","ESV5-100"],
+[4,"¿Qué poder era incuestionable en la Edad Media según el tema?","El de la Iglesia Católica","El de la burguesía","El de los gremios textiles","El de los parlamentos","ESV5-101"]
 ]);

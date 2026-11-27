@@ -12,7 +12,6 @@ BANCO.add("estilismo", 6, [
 [4,"¿Con qué sobrenombre se conocía a Luis XIV?","El Rey Sol","El Rey Prudente","El Rey Piadoso","El Rey Planeta","ESV6-011"],
 [4,"¿De qué estaban formados los trajes femeninos barrocos?","Corpiños escotados y faldas muy voluminosas","Túnicas holgadas de lino","Pantalones y jubones","Togas y estolas","ESV6-012"],
 [4,"¿Qué armazón sustituyó al verdugado en el Barroco?","El guardainfantes","El miriñaque","La golilla","El corsé","ESV6-013"],
-[4,"¿Qué reina aparece en el tema luciendo guardainfantes?","Mariana de Austria","María Antonieta","Isabel la Católica","Isabel de Farnesio","ESV6-014"],
 [4,"¿Cómo eran las mangas del cuerpo femenino barroco?","Cortas y amplias, rematadas con encajes","Largas y ajustadas","Desmontables","Inexistentes","ESV6-015"],
 [4,"¿Qué colores fueron los más empleados en la indumentaria femenina barroca?","Azules y escarlata","Verde y amarillo","Blanco y negro","Rosa y gris","ESV6-016"],
 [4,"¿Qué llevaban las mujeres barrocas debajo de las faldas para aportar volumen?","Enaguas","Pantalones","Medias de seda","Calzones","ESV6-017"],
@@ -31,7 +30,6 @@ BANCO.add("estilismo", 6, [
 [5,"¿Qué caracterizaba al traje de la corte francesa desde mediados del siglo XVII?","Su extravagancia","Su sobriedad","Su color negro","Su sencillez","ESV6-030"],
 [5,"¿Con qué decoraban los zapatos los cortesanos franceses del Barroco?","Lentejuelas, lazos y rosetones","Clavos de metal","Plumas","Piedras preciosas exclusivamente","ESV6-031"],
 [5,"¿Qué empezaron a llevar los hombres barrocos en la cabeza?","Pelucas de gran peso y tamaño","Turbantes","Cofias de lino","Tocados Fontange","ESV6-032"],
-[5,"¿Qué rey aparece en el tema con la peluca característica de la época?","Felipe V","Felipe II","Carlos I","Fernando VII","ESV6-033"],
 [5,"¿Qué llevaban los hombres de la corte española por influencia francesa?","Pelucas, casacas, chalecos y corbatas de encaje o muselina","Gorgueras y jubones negros","Togas","Pantalones vaqueros","ESV6-034"],
 [5,"¿Por qué empezó a llevar peluca el Rey Sol según el tema?","Para disimular su calvicie y aumentar su estatura","Por frío","Por moda inglesa","Por motivos religiosos","ESV6-035"],
 [5,"¿Qué hicieron los cortesanos con el estilismo de la peluca del Rey Sol?","Lo copiaron","Lo prohibieron","Lo criticaron","Lo ignoraron","ESV6-036"],
@@ -98,5 +96,7 @@ BANCO.add("estilismo", 6, [
 [8,"¿Qué complementos destacan en la indumentaria femenina rococó, además de los peinados Fontange?","Los zapatos de tacón y los lazos atados al cuello","Las zapatillas deportivas","Los sombreros de copa","Las gafas de sol","ESV6-097"],
 [9,"¿Qué prenda combinaban las mujeres tras la Revolución Francesa con cuerpos sencillos y faldas de vuelo?","Chaquetas entalladas o redingotes","Corsés de ballenas","Miriñaques","Guardainfantes","ESV6-098"],
 [9,"Tras la Revolución Francesa, ¿qué prendas eliminaron los hombres de su vestuario?","Los trajes brocados, las casacas bordadas y las pelucas empolvadas","Los pantalones y las botas","Las corbatas de seda negra","Los pañuelos","ESV6-099"],
-[9,"¿Qué ocurrió con los tacones altos tras la Revolución Francesa?","Se suprimieron por considerarse lujosos o innecesarios","Se hicieron obligatorios","Se elevaron aún más","Se reservaron a los niños","ESV6-100"]
+[9,"¿Qué ocurrió con los tacones altos tras la Revolución Francesa?","Se suprimieron por considerarse lujosos o innecesarios","Se hicieron obligatorios","Se elevaron aún más","Se reservaron a los niños","ESV6-100"],
+[4,"¿Qué estructura sustituyeron los cuellos de encaje en el Barroco?","Las gorgueras, que fueron disminuyendo","Las capas","Los corsés","Los miriñaques","ESV6-101"],
+[5,"¿Qué prendas llevaban los hombres de la corte española por influencia francesa?","Pelucas, casacas, chalecos y corbatas de encaje o muselina","Túnicas y sandalias","Gorgueras y calzas medievales","Togas y fíbulas","ESV6-102"]
 ]);

@@ -31,7 +31,6 @@ BANCO.add("peluqueria", 4, [
 [6,"¿Qué se anota en el apartado de cambio de forma permanente?","Productos aplicados, tipo de molde utilizado y tiempos de exposición","Peinados frecuentes","Técnica de corte","Numeración del color","PEL4-030"],
 [6,"¿Qué se anota en el apartado de cambio de forma temporal?","Peinados más frecuentes realizados por el cliente","Productos de permanente","Tiempos de tinte","Herramientas de corte","PEL4-031"],
 [6,"¿Qué se anota en el apartado de corte de la ficha técnica?","Técnica y herramientas utilizadas","Productos de tratamiento","Numeración del color","Moldes","PEL4-032"],
-[6,"Según un enlace del tema, ¿qué permiten algunas webs?","Realizar un cambio de cabello de manera virtual","Comprar pelucas exclusivamente","Pedir cita médica","Leer revistas","PEL4-033"],
 [7,"En el asesoramiento masculino, ¿qué zona ayuda a corregir la barba?","La zona de mentón y barbilla","La frente","Las sienes","Los ojos","PEL4-034"],
 [7,"En rostros dilatados, ¿cómo se trabaja la barba?","Muy perfilada para reducir el volumen lateral","Con mucho volumen","Sin perfilar","Rapada siempre","PEL4-035"],
 [7,"En rostros retraídos, ¿cómo ayuda la barba?","Con más volumen en el vello para equilibrar","Muy perfilada","Rapada","No ayuda","PEL4-036"],
@@ -98,5 +97,6 @@ BANCO.add("peluqueria", 4, [
 [12,"¿Qué se recomienda en un rostro alargado para acortar su longitud?","Un flequillo que aporte horizontalidad","Un recogido muy alto","Eliminar todo el volumen lateral","Un corte con raya al medio sin flequillo","PEL4-097"],
 [12,"¿Cuándo comienza la ejecución del cambio de imagen?","Cuando el cliente ha entendido y aprobado la propuesta","Antes de presentar la propuesta","Tras la primera llamada","Cuando lo decide el peluquero","PEL4-098"],
 [12,"¿Cómo corrige ópticamente el corte de pelo?","Con el largo y el movimiento que aporta","Solo con el color","Con productos de fijación","No corrige nada","PEL4-099"],
-[13,"¿Cómo debe comunicarse el asesor con su equipo de colaboradores según las buenas prácticas?","Desde la horizontalidad y la honestidad","Con autoritarismo","Solo por escrito","Sin comunicarse","PEL4-100"]
+[13,"¿Cómo debe comunicarse el asesor con su equipo de colaboradores según las buenas prácticas?","Desde la horizontalidad y la honestidad","Con autoritarismo","Solo por escrito","Sin comunicarse","PEL4-100"],
+[4,"Antes de entregar un presupuesto, ¿qué hay que desglosar?","Todos los servicios que se van a realizar y el precio de cada uno","Solo el precio total","Solo el nombre del peluquero","Nada","PEL4-101"]
 ]);

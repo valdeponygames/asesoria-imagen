@@ -61,7 +61,6 @@ BANCO.add("protocolo", 3, [
 [8,"¿Cuántas Subdelegaciones del Gobierno hay en las provincias?","Cuarenta y cuatro","Cincuenta","Diecisiete","Cuarenta y uno","PRO3-060"],
 [9,"¿Cuál es la norma institucional propia de cada Comunidad Autónoma?","Su Estatuto de Autonomía","El Real Decreto de Precedencias","La Ley de Bases del Régimen Local","El Reglamento del Senado","PRO3-061"],
 [9,"¿Cuál de estas es un área de competencia autonómica según el Estatuto?","Las de competencia exclusiva de las Comunidades","Las reservadas exclusivamente al Rey","Las de competencia exclusiva de los Ayuntamientos","Las de la Unión Europea","PRO3-062"],
-[9,"¿Quién era delegado del Gobierno en Galicia según la imagen del tema?","José Manuel Miñones Conde","Alberto Núñez Feijóo","Pedro Sánchez","Pablo Casado","PRO3-063"],
 [9,"¿En qué se basan las relaciones entre el poder estatal y el autonómico?","En la cooperación","En la subordinación absoluta","En la competencia","En la independencia total","PRO3-064"],
 [9,"La cooperación en la que participan el Estado y todas las Comunidades conjuntamente es:","Multilateral o sectorial","Bilateral","Unilateral","Local","PRO3-065"],
 [9,"La cooperación en la que participan el Estado y una única Comunidad es:","Bilateral","Multilateral","Sectorial","Territorial","PRO3-066"],
@@ -98,5 +97,6 @@ BANCO.add("protocolo", 3, [
 [9,"Un tipo de competencias compartidas entre el Estado y las Comunidades es el de las:","Legisladas por el Estado y ejecutadas por las Comunidades","Legisladas y ejecutadas solo por los ayuntamientos","Legisladas por la Unión Europea y ejecutadas por las provincias","Legisladas por las Comunidades y ejecutadas por el Rey","PRO3-097"],
 [9,"¿Quién determina el orden del día, la fecha y el lugar de la reunión de la Conferencia de presidentes?","La convocatoria del presidente del Gobierno","Cada presidente autonómico por separado","El Rey","El Senado","PRO3-098"],
 [9,"¿En qué caso puede no asistir personalmente un presidente autonómico a la Conferencia?","Cuando un consejero ejerce temporalmente las funciones de presidente autonómico","Cuando prefiere enviar a un asesor","Siempre que lo comunique con un día de antelación","Cuando la reunión es ordinaria","PRO3-099"],
-[11,"¿Qué entidades locales menores quedan por detrás del municipio en precedencia según la Ley 7/1985?","Caseríos, parroquias, aldeas, barrios o pedanías","Las Comunidades Autónomas","Las provincias","Las Delegaciones del Gobierno","PRO3-100"]
+[11,"¿Qué entidades locales menores quedan por detrás del municipio en precedencia según la Ley 7/1985?","Caseríos, parroquias, aldeas, barrios o pedanías","Las Comunidades Autónomas","Las provincias","Las Delegaciones del Gobierno","PRO3-100"],
+[8,"¿Ante qué Ministerio tiene precedencia la Presidencia del Gobierno según el artículo 15?","Ante todos los Ministerios","Solo ante Justicia","Solo ante Defensa","Ante ninguno","PRO3-101"]
 ]);

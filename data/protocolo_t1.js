@@ -24,7 +24,6 @@ BANCO.add("protocolo", 1, [
 [4,"Según el tema, ¿en qué siglo se diseñó el protocolo diplomático durante el papado de Julio II?","Siglo XVII","Siglo XII","Siglo XIX","Siglo V","PRO1-023"],
 [4,"¿Quién instauró el protocolo social?","Luis XII, rey de Francia","El emperador Constantino","El papa Julio II","Hammurabi","PRO1-024"],
 [4,"Relaciona correctamente: el protocolo académico se asocia a…","El Imperio Carolingio","La Grecia clásica","El papado de Julio II","El reinado de Luis XII","PRO1-025"],
-[4,"¿Qué edificio aparece como residencia oficial de la Familia Real en el tema?","El Palacio Real de Madrid","El Palacio de la Zarzuela","El Palacio de El Pardo","El Palacio de Aranjuez","PRO1-026"],
 [5,"¿Con qué disciplinas está ligada la disciplina del protocolo?","Historia, diplomacia, heráldica, antropología, sociología, relaciones públicas, estética y moda","Solo con el derecho y la economía","Únicamente con la historia del arte","Exclusivamente con la política","PRO1-027"],
 [5,"La función fundamental del protocolo es:","Promover y facilitar la convivencia y las relaciones sociales, profesionales y diplomáticas","Aumentar el beneficio económico de las empresas","Imponer jerarquías rígidas e inamovibles","Decorar los espacios donde se celebran actos","PRO1-028"],
 [5,"El protocolo surge de:","Una necesidad social","Una imposición religiosa","Una moda pasajera","Una exigencia comercial","PRO1-029"],
@@ -43,7 +42,6 @@ BANCO.add("protocolo", 1, [
 [5,"La precedencia de los invitados en un acto es competencia de:","El protocolo","El departamento de marketing","El servicio de catering","El departamento financiero","PRO1-042"],
 [5,"¿Cuál de estos aspectos de un evento se cita como competencia del protocolo?","El orden o estructura del acto","La contratación de seguros médicos","El cálculo de impuestos","El mantenimiento del edificio","PRO1-043"],
 [5,"Según algunos autores, ¿qué diferencia a los «actos» de los «eventos»?","Los actos se caracterizan por su solemnidad y por seguir una normativa","Los actos siempre son privados","Los eventos siempre son oficiales","Los actos no tienen invitados","PRO1-044"],
-[5,"¿Qué espacio aparece en el tema como ejemplo de espacio de celebración de actos?","Un teatro","Un hospital","Un aeropuerto","Un supermercado","PRO1-045"],
 [6,"¿Quién es el máximo responsable en materia de protocolo en una empresa, institución o proyecto?","El jefe de protocolo","El responsable de marketing","El auxiliar de protocolo","La secretaría","PRO1-046"],
 [6,"El puesto de jefe de protocolo puede ser:","Un puesto fijo o un cargo creado expresamente para un proyecto concreto","Siempre un puesto temporal","Siempre un cargo político","Un puesto honorífico sin funciones","PRO1-047"],
 [6,"¿Cuál es un ejemplo de jefe de protocolo con puesto fijo?","El jefe de Protocolo de la Casa Real","El jefe de Protocolo de unos Juegos Olímpicos","El jefe de Protocolo de un festival de cine","El jefe de Protocolo de una boda","PRO1-048"],
@@ -98,5 +96,7 @@ BANCO.add("protocolo", 1, [
 [8,"¿De qué depende la distribución del equipo de un departamento de protocolo en distintas áreas?","De las necesidades específicas del departamento o del proyecto","Del número de invitados de prensa únicamente","De la edad de los profesionales","De la normativa de la Unión Europea","PRO1-097"],
 [9,"¿Qué se hace en la primera fase de trabajo de un departamento de protocolo?","Analizar el proyecto y presentar propuestas estratégicas para su puesta en marcha","Celebrar el acto con los invitados","Comparar resultados con los objetivos","Archivar la documentación del evento","PRO1-098"],
 [9,"La fase de desarrollo y ejecución del proyecto abarca:","Desde los primeros pasos hasta la celebración del acto","Solo el día del acto","Únicamente la evaluación posterior","La firma del contrato con el cliente","PRO1-099"],
-[9,"¿Con qué fin debe contar el profesional del protocolo con documentación de apoyo y consulta?","Para desempeñar su trabajo de forma eficiente y resolutiva","Para sustituir la comunicación con el cliente","Para no tener que investigar nunca","Para justificar retrasos ante el cliente","PRO1-100"]
+[9,"¿Con qué fin debe contar el profesional del protocolo con documentación de apoyo y consulta?","Para desempeñar su trabajo de forma eficiente y resolutiva","Para sustituir la comunicación con el cliente","Para no tener que investigar nunca","Para justificar retrasos ante el cliente","PRO1-100"],
+[5,"¿Qué ámbito del protocolo se ocupa de la organización de actos con fines comerciales?","El protocolo empresarial","El protocolo religioso","El protocolo militar","El protocolo académico","PRO1-101"],
+[5,"¿De qué se ocupa también el protocolo en la organización de un evento, además de las precedencias?","De los símbolos, las intervenciones y las funciones del anfitrión","Solo del menú","Solo de la música","Solo de la iluminación","PRO1-102"]
 ]);

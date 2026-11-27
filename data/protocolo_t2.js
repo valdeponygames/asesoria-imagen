@@ -54,7 +54,6 @@ BANCO.add("protocolo", 2, [
 [6,"¿Cuál de estos ministros forma parte del Consejo de Defensa Nacional?","Ministro de Interior","Ministro de Cultura","Ministro de Sanidad","Ministro de Educación","PRO2-053"],
 [6,"¿Qué director forma parte del Consejo de Defensa Nacional?","El director del Centro Nacional de Inteligencia","El director de la Guardia Civil","El director de RTVE","El director del Museo del Prado","PRO2-054"],
 [6,"¿Quién preside las reuniones del Consejo de Defensa Nacional cuando asiste a ellas?","El Rey","El ministro de Defensa","El vicepresidente del Gobierno","El jefe del Estado Mayor","PRO2-055"],
-[6,"En la imagen del tema, Felipe VI aparece con uniforme de:","Capitán General del Ejército de Tierra","Almirante de la Armada","General del Aire","Guardia Real","PRO2-056"],
 [7,"¿En qué Título de la Constitución se contempla el poder legislativo?","Título III: «De las Cortes»","Título IV: «Del Gobierno y de la Administración»","Título VI: «Del Poder Judicial»","Título IX","PRO2-057"],
 [7,"¿Cuáles son las dos Cámaras de las Cortes Generales?","El Congreso de los Diputados y el Senado","El Congreso y el Consejo de Estado","El Senado y el Tribunal Constitucional","El Parlamento y la Asamblea","PRO2-058"],
 [7,"¿Cuál es la Cámara Baja?","El Congreso de los Diputados","El Senado","El Consejo de Estado","El Tribunal de Cuentas","PRO2-059"],

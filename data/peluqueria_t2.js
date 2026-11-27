@@ -19,7 +19,6 @@ BANCO.add("peluqueria", 2, [
 [5,"¿Para qué sirve el apoyo del cine y la televisión como fuente documental?","Para que nuestra idea sea identificable para el cliente","Para cobrar más","Para aprender técnicas químicas","Para nada","PEL2-018"],
 [5,"¿Qué redes sociales son la gran fuente de imágenes de ejemplo según el tema?","Pinterest e Instagram","LinkedIn y Twitter","Facebook y WhatsApp","TikTok y YouTube","PEL2-019"],
 [5,"¿Se pueden encontrar las revistas en versión web?","Sí","No","Solo las de cine","Solo las técnicas","PEL2-020"],
-[5,"¿Cuántas revistas de peluquería recomienda el enlace del tema?","Cinco","Tres","Diez","Dos","PEL2-021"],
 [6,"Una vez seleccionadas las fuentes, ¿qué se comienza a elaborar?","El muestrario","El presupuesto","El contrato","La factura","PEL2-022"],
 [6,"Al elaborar el muestrario, ¿qué técnicas se pueden combinar?","Técnicas analógicas y digitales","Solo técnicas digitales","Solo técnicas analógicas","Ninguna","PEL2-023"],
 [6,"¿Qué es lo importante del muestrario, sea cual sea la técnica?","Que contenga toda la información que necesitamos para trabajar","Que sea caro","Que sea grande","Que tenga muchas páginas","PEL2-024"],
@@ -68,7 +67,6 @@ BANCO.add("peluqueria", 2, [
 [11,"¿Cuántas alturas de recogidos distingue el muestrario?","Tres","Dos","Cuatro","Cinco","PEL2-067"],
 [11,"¿Qué otros muestrarios de técnicas variadas se pueden crear si se considera necesario?","De peinado y de época","De precios y de marcas","De maquillaje y uñas","De vestuario","PEL2-068"],
 [11,"¿Cuándo puede ser necesario un muestrario de peinados de época?","Si trabajamos para producciones de ficción","Para bodas modernas","Para clientes corporativos","Nunca","PEL2-069"],
-[11,"¿Qué figura ilustra el apartado de recogidos?","Un recogido con anillas huecas","Una novia","Un collage","Una azafata","PEL2-070"],
 [12,"Según el resumen, ¿para qué sirven los documentos gráficos de referencia en la entrevista?","Para que el cliente elija según sus gustos","Para cobrar","Para firmar el contrato","Para nada","PEL2-071"],
 [12,"Según el resumen, ¿para qué sirven los documentos gráficos en la ejecución?","Para guiar al equipo de colaboradores","Para que el cliente elija","Para presupuestar","Para publicitar","PEL2-072"],
 [12,"Según el esquema resumen, ¿cuáles son las fuentes documentales de la fase de documentación?","Revistas, libros, redes sociales, webs y medios audiovisuales","Solo libros","Solo revistas","Solo redes sociales","PEL2-073"],
@@ -82,7 +80,6 @@ BANCO.add("peluqueria", 2, [
 [10,"Una estructura de tul que cubre solo una zona del cuero cabelludo es:","Un postizo","Una peluca completa","Una extensión de banda","Una extensión individual","PEL2-081"],
 [11,"Un recogido situado a la altura de la nuca es un recogido:","Bajo","Alto","Medio","Lateral","PEL2-082"],
 [11,"Un recogido situado en la zona alta de la cabeza es un recogido:","Alto","Bajo","Medio","Frontal","PEL2-083"],
-[3,"¿Qué figura ilustra la introducción del tema de documentación?","Asesora y clientes viendo tablet","Novia en el tocador","Azafata","Backstage","PEL2-084"],
 [12,"Según el resumen, ¿cómo es la documentación que sirve de referencia?","Muy variada y en diferentes formatos","Única y en papel","Solo digital","Solo técnica","PEL2-085"],
 [6,"Pinterest permite organizar colecciones de imágenes en:","Tableros personales temáticos","Hojas de cálculo","Carpetas de correo","Diapositivas","PEL2-086"],
 [4,"La base de información de patrones estéticos sirve para obtener:","Referencias visuales y trabajar de forma más sencilla","Contratos","Facturas","Permisos","PEL2-087"],
@@ -98,5 +95,8 @@ BANCO.add("peluqueria", 2, [
 [11,"¿Qué recoge el muestrario de peinados?","Diferentes acabados de peinado del cabello","Solo cortes masculinos","Solo coloraciones","Las tarifas del salón","PEL2-097"],
 [11,"¿Para qué se organiza el muestrario de recogidos por alturas?","Para que sea fácil y práctico trabajar con él","Para que ocupe menos papel","Para cumplir una ley","Para ocultar opciones al cliente","PEL2-098"],
 [11,"¿Qué se enseña al cliente con el muestrario de recogidos?","Los diferentes acabados del cabello recogido que podemos realizarle","Solo cortes de pelo corto","Coloraciones de fantasía","Pelucas completas","PEL2-099"],
-[12,"Según el resumen, ¿para qué sirven también los documentos gráficos durante la ejecución?","Para guiar al equipo de colaboradores","Para cobrar al cliente","Para decorar el salón","Para la publicidad en redes","PEL2-100"]
+[12,"Según el resumen, ¿para qué sirven también los documentos gráficos durante la ejecución?","Para guiar al equipo de colaboradores","Para cobrar al cliente","Para decorar el salón","Para la publicidad en redes","PEL2-100"],
+[4,"¿Para qué sirven las revistas especializadas al asesor de peluquería?","Como fuente de referencias de peinados y tendencias","Para fijar los precios","Para contratar personal","Para registrar clientes","PEL2-101"],
+[6,"¿Qué recurso visual es un collage con fotos inspiracionales?","El moodboard","El Face Chart","La ficha de registro","El presupuesto","PEL2-102"],
+[11,"¿Qué tipo de recogido se sitúa en la zona media de la cabeza?","El recogido medio","El recogido alto","El recogido bajo","El semirrecogido lateral","PEL2-103"]
 ]);

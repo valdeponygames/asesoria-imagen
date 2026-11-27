@@ -11,7 +11,6 @@ BANCO.add("comunicacion", 1, [
 [5,"¿Cuándo existe comunicación según el requisito de interpretación?","Cuando el receptor entiende el mensaje con el mismo significado que quiso transmitir el emisor","Cuando el mensaje llega al receptor","Cuando el emisor habla","Cuando el canal funciona","COM1-010"],
 [5,"¿Qué es necesario como mínimo para que exista comunicación?","Un emisor y un receptor que conozcan un mismo código y tengan acceso a un mismo canal","Un emisor y un medio de comunicación","Dos emisores y un mensaje","Un receptor y un traductor","COM1-011"],
 [5,"El proceso comunicativo es dinámico porque:","Se invierten los papeles: el receptor se convierte en emisor al responder","El mensaje cambia siempre","El canal es siempre digital","No tiene fin","COM1-012"],
-[5,"¿Qué ejemplo de canal de comunicación aparece en la imagen del tema?","El teléfono","La televisión","La radio","El periódico","COM1-013"],
 [5,"¿Cuál es la función principal de la comunicación?","Informativa","Expresiva","Persuasiva","Didáctica","COM1-014"],
 [5,"La comunicación informativa será eficaz si la información emitida es:","Completa y veraz","Breve y emotiva","Persuasiva","Original","COM1-015"],
 [5,"¿Por qué a los medios de comunicación se les llama también «medios informativos»?","Por su compromiso social de informar y garantizar el derecho de los ciudadanos a ser informados","Porque solo emiten noticias de política","Porque son propiedad del Estado","Porque no publican opiniones","COM1-016"],
@@ -25,7 +24,6 @@ BANCO.add("comunicacion", 1, [
 [6,"La función instructiva consiste en transmitir:","Instrucciones, consejos u órdenes","Emociones y sentimientos","Información veraz","Valores morales","COM1-024"],
 [6,"¿Qué función de la comunicación responde a nuestra necesidad de sentirnos aceptados socialmente?","Integradora","Expresiva","Informativa","Persuasiva","COM1-025"],
 [6,"La función integradora posibilita:","Las relaciones sociales e interactuar con personas afines","La transmisión de órdenes","La venta de productos","La enseñanza de conceptos","COM1-026"],
-[6,"Según la imagen del tema, la comunicación publicitaria es:","Persuasiva","Instructiva","Didáctica","Integradora","COM1-027"],
 [6,"¿Cuántas funciones de la comunicación se describen en el tema?","Seis","Cuatro","Cinco","Tres","COM1-028"],
 [6,"¿Por qué se dice que el proceso de comunicación es cíclico?","Porque el receptor, al responder, se convierte en el nuevo emisor","Porque el mensaje se repite siempre","Porque se produce en círculo físico","Porque no tiene canal","COM1-029"],
 [6,"¿Cuáles son los agentes del proceso comunicativo?","El emisor y el receptor","El mensaje y el código","El canal y el contexto","El ruido y el feedback","COM1-030"],
@@ -98,5 +96,7 @@ BANCO.add("comunicacion", 1, [
 [9,"¿Qué es fundamental en los equipos de trabajo para cumplir las funciones y objetivos asignados?","La relación y coordinación de sus integrantes","Que cada miembro trabaje de forma aislada","Que no exista comunicación interna","Que solo el jefe tome la palabra","COM1-097"],
 [10,"¿Qué define el asesor de comunicación respecto a los mensajes de su cliente?","Los contenidos de los mensajes a comunicar","El precio de los productos de la empresa","El horario laboral de los empleados","La decoración de las oficinas","COM1-098"],
 [10,"Además de los mensajes, ¿qué elige el asesor de comunicación?","Las herramientas de comunicación para transmitirlos","El vestuario de todos los empleados","Los proveedores de material de oficina","Las vacaciones del cliente","COM1-099"],
-[10,"¿De qué tipos de comunicación define la estrategia el asesor de comunicación?","Interpersonal, social o empresarial","Solo de la comunicación intrapersonal","Únicamente de la publicidad en televisión","Solo de la correspondencia escrita","COM1-100"]
+[10,"¿De qué tipos de comunicación define la estrategia el asesor de comunicación?","Interpersonal, social o empresarial","Solo de la comunicación intrapersonal","Únicamente de la publicidad en televisión","Solo de la correspondencia escrita","COM1-100"],
+[5,"Una llamada, una carta, un SMS o un email son ejemplos de:","Medios o canales para transmitir un mensaje","Códigos lingüísticos","Contextos comunicativos","Barreras semánticas","COM1-101"],
+[4,"¿Cuál de estos contenidos se propone conocer en el tema sobre la comunicación?","Las funciones de la comunicación y los elementos del proceso comunicativo","La historia de la imprenta","La gramática latina","Las normas de tráfico","COM1-102"]
 ]);

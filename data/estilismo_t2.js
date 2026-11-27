@@ -63,7 +63,6 @@ BANCO.add("estilismo", 2, [
 [9,"¿Desde qué año ofrece la Pasarela EGO oportunidades a jóvenes talentos?","Desde 2006","Desde 1943","Desde 1995","Desde 2015","ESV2-062"],
 [9,"¿Qué diseñadores reconocidos encontraron su catapulta en la Pasarela EGO según el tema?","Moisés Nieto y María Escoté","Amancio Ortega y Balenciaga","Ágatha Ruiz de la Prada y Pertegaz","Custo Dalmau y Victorio & Lucchino","ESV2-063"],
 [9,"¿Qué son las pop up stores que se habilitan coincidiendo con los desfiles?","Espacios de venta de colecciones de diseño de edición limitada y exclusiva","Tiendas permanentes de grandes marcas","Almacenes de fábrica","Tiendas de segunda mano","ESV2-064"],
-[9,"¿Qué institución organiza la Semana de la Moda de Madrid según el enlace del tema?","IFEMA","FIMI","SIMOF","EGO","ESV2-065"],
 [9,"Según el resumen, ¿qué pueden presentar los diseñadores fuera del calendario de temporadas principales?","Colecciones crucero, cápsula o colaboraciones exclusivas","Solo alta costura","Solo colecciones de invierno","Nada","ESV2-066"],
 [9,"Según el esquema resumen, la presentación de colecciones otoño-invierno en las Semanas de la Moda se hace en:","Enero-marzo","Junio-septiembre","Octubre-diciembre","Abril-mayo","ESV2-067"],
 [7,"¿Qué sirven las principales pasarelas internacionales para el resto de eventos de moda?","De inspiración y marcan tendencia","De competencia directa","De almacén","De sede administrativa","ESV2-068"],
@@ -98,5 +97,6 @@ BANCO.add("estilismo", 2, [
 [8,"¿Ante qué tipo de público pueden mostrar sus colecciones los jóvenes diseñadores en las grandes pasarelas?","Ante un público experto, influyente y estratégico","Ante un público sin interés por la moda","Solo ante sus familiares","Ante nadie, solo para la prensa local","ESV2-097"],
 [9,"¿Qué puede adquirir el público en las pop up stores de las pasarelas?","Creaciones de diseño de edición limitada y exclusiva","Ropa de segunda mano","Entradas para los desfiles del año siguiente","Material escolar","ESV2-098"],
 [9,"Según el resumen, ¿qué sirve de hilo conductor y denominador común de una colección?","Una tendencia o inspiración","El precio de las prendas","El número de tallas","La fábrica que la produce","ESV2-099"],
-[9,"Según el resumen, ¿con qué periodicidad se celebran las Fashion Weeks de las capitales de la moda?","Bianual","Mensual","Cada cinco años","Diaria","ESV2-100"]
+[9,"Según el resumen, ¿con qué periodicidad se celebran las Fashion Weeks de las capitales de la moda?","Bianual","Mensual","Cada cinco años","Diaria","ESV2-100"],
+[5,"¿Qué colecciones se presentan hoy como adelanto de colecciones importantes y con carácter atemporal?","Las colecciones crucero","Las colecciones cápsula","Las segundas líneas","Las colecciones de alta costura","ESV2-101"]
 ]);

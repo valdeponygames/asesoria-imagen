@@ -1,5 +1,4 @@
 BANCO.add("protocolo", 4, [
-[3,"En la imagen de inicio del tema, Felipe VI aparece con el Collar del Toisón de Oro y la Banda de:","La Real Orden de Carlos III","La Orden de Isabel la Católica","La Orden del Mérito Civil","La Orden de Santiago","PRO4-001"],
 [4,"¿Qué Real Decreto regula el régimen de títulos, tratamientos y honores de la Familia Real y de los Regentes?","Real Decreto 1368/1987, de 6 de noviembre","Real Decreto 2099/1983, de 4 de agosto","Real Decreto 470/2014, de 13 de junio","Real Decreto 707/1979","PRO4-002"],
 [4,"¿Qué título honorífico ostenta el Rey de España desde los Reyes Católicos?","Majestad Católica","Majestad Cristianísima","Majestad Imperial","Majestad Fidelísima","PRO4-003"],
 [4,"¿Qué papa concedió a los Reyes Católicos el título de Majestad Católica?","Alejandro VI","Julio II","León X","Inocencio VIII","PRO4-004"],
@@ -81,7 +80,6 @@ BANCO.add("protocolo", 4, [
 [10,"La entrega de la «llave de oro de la villa» es un ejemplo de:","Condecoración de una corporación local","Nombramiento honorífico","Título nobiliario","Orden civil del Estado","PRO4-080"],
 [10,"El nombramiento de «hijo predilecto» se concede a:","Los nacidos en el municipio correspondiente","Los residentes extranjeros","Los nacidos fuera del municipio","Los alcaldes","PRO4-081"],
 [10,"¿A qué dan derecho los nombramientos de hijo predilecto o adoptivo?","Al uso de insignias identificativas en actos oficiales","A una pensión vitalicia","A un título nobiliario","A presidir actos municipales","PRO4-082"],
-[10,"¿Quién aparece en el tema recibiendo la distinción de Hijo Predilecto de Andalucía?","Curro Romero","Antonio Banderas","Rafael Nadal","Lola Flores","PRO4-083"],
 [10,"¿Qué expresan los tratamientos honoríficos?","La categoría social de una persona","La riqueza de una persona","La edad de una persona","El partido político al que pertenece","PRO4-084"],
 [10,"«Excelentísimo» es el superlativo de:","Excelente","Ilustre","Exacto","Eminente","PRO4-085"],
 [10,"¿Cómo se aplica correctamente el tratamiento de Excelentísimo seguido del nombre?","Excelentísimo Señor Don Pedro Sánchez","Señor Excelentísimo Pedro Sánchez","Don Excelentísimo Pedro Sánchez","Pedro Sánchez, Señor Excelentísimo","PRO4-086"],
